@@ -23,9 +23,14 @@ export default function RotatingText({
           />
         </defs>
 
-        <text fill="white" fontSize="17.5" letterSpacing="3">
-          <textPath href="#circlePath" startOffset="0%">
-            •OWN &amp; GROW YOUR BUSINESS IN UAE
+        <text fill="white" fontSize="19">
+          <textPath
+            href="#circlePath"
+            startOffset="0%"
+            textLength="471"
+            lengthAdjust="spacing"
+          >
+            OWN &amp; GROW YOUR BUSINESS IN UAE •
           </textPath>
         </text>
       </svg>
