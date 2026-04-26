@@ -9,7 +9,7 @@ const AboutSection = () => {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
         {/* Left: Text Content */}
-        <div className="flex-1 max-w-xl">
+        <div className="flex-1 max-w-xl pl-8">
           {/* Heading */}
           <h2
             className={`text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8 text-foreground ${playfair.className}`}

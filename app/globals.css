@@ -153,3 +153,628 @@
     transform: rotate(360deg);
   }
 }
+
+/* ── Services Overview Section ── */
+.services-overview {
+  padding: 64px 24px;
+  background: #ffffff;
+}
+.dark .services-overview {
+  background: var(--background);
+}
+
+.services-overview__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid #d4d4d4;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.services-overview__card {
+  padding: 40px 30px;
+  border-right: 1px solid #d4d4d4;
+  transition: background 0.25s ease;
+  position: relative;
+}
+
+.services-overview__card:last-child {
+  border-right: none;
+}
+
+.services-overview__card:hover {
+  background: #f9fafb;
+}
+
+.services-overview__title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+.services-overview__desc {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: #888;
+}
+
+/* ── Responsive: 2-col on tablets, 1-col on mobile ── */
+@media (max-width: 900px) {
+  .services-overview__inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .services-overview__card:nth-child(2) {
+    border-right: none;
+  }
+  .services-overview__card:nth-child(1),
+  .services-overview__card:nth-child(2) {
+    border-bottom: 1px solid #d4d4d4;
+  }
+}
+
+@media (max-width: 540px) {
+  .services-overview {
+    padding: 40px 16px;
+  }
+  .services-overview__inner {
+    grid-template-columns: 1fr;
+  }
+  .services-overview__card {
+    border-right: none;
+    border-bottom: 1px solid #d4d4d4;
+  }
+  .services-overview__card:last-child {
+    border-bottom: none;
+  }
+}
+
+/* ══════════════════════════════════════════
+   Support Section
+   ══════════════════════════════════════════ */
+.support-section {
+  padding: 32px 24px 64px;
+  background: #f5f5f5;
+}
+.dark .support-section {
+  background: var(--background);
+}
+.support-section__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+/* ── Shared card ── */
+.support-card {
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ── Card 1: News ── */
+.support-card--news {
+  background: #1a1a2e;
+}
+.support-card__image-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+}
+.support-card__image {
+  object-fit: cover;
+}
+.support-card__image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
+  z-index: 1;
+}
+.support-card__image-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 28px;
+  z-index: 2;
+  color: #fff;
+}
+.support-card__image-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+  margin-bottom: 12px;
+}
+.support-card__image-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+.support-card__image-desc {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.8);
+}
+
+/* ── Card 2: CTA (green) ── */
+.support-card--cta {
+  background: #2d5a3d;
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.support-card__heading {
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 16px;
+  line-height: 1.25;
+}
+.support-card__text {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.82);
+  margin-bottom: 28px;
+}
+.support-card__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.support-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: fit-content;
+}
+.support-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+.support-btn__icon {
+  width: 18px;
+  height: 18px;
+}
+.support-btn--chat {
+  background: #fff;
+  color: #2d5a3d;
+}
+.support-btn--call {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* ── Card 3: Schedule (navy blue) ── */
+.support-card--schedule {
+  background: linear-gradient(135deg, #1e3a5f 0%, #0f1d3d 100%);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.support-card__schedule-text {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.92);
+  margin-bottom: 24px;
+}
+.support-card__dates {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.support-date-pill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.15);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  flex: 1;
+}
+.support-date-pill:hover {
+  background: rgba(255,255,255,0.25);
+}
+.support-date-pill--active {
+  background: rgba(255,255,255,0.3);
+  color: #fff;
+}
+.support-date-pill__num {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+}
+.support-date-pill__day {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.8);
+  margin-top: 2px;
+}
+.support-date-pill--active .support-date-pill__num,
+.support-date-pill--active .support-date-pill__day {
+  color: #fff;
+}
+
+/* Swipe track */
+.support-swipe {
+  position: relative;
+  height: 52px;
+  border-radius: 30px;
+  background: rgba(10, 20, 45, 0.6);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.support-swipe__thumb {
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+  z-index: 2;
+  transition: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.support-swipe__thumb:active {
+  cursor: grabbing;
+}
+.support-swipe__icon {
+  width: 20px;
+  height: 20px;
+  color: #1e3a5f;
+}
+.support-swipe__label {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ══════════════════════════════════════════
+   Schedule Meeting Modal
+   ══════════════════════════════════════════ */
+.schedule-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.25s ease;
+}
+.schedule-modal {
+  background: #fff;
+  border-radius: 20px;
+  width: 480px;
+  max-width: 92vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 40px 36px;
+  position: relative;
+  animation: slideUp 0.3s ease;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.25);
+  text-align: center;
+}
+.schedule-modal__close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: transparent;
+  border: none;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.2s;
+}
+.schedule-modal__close:hover {
+  color: #1a1a1a;
+}
+
+/* Header icon */
+.schedule-modal__header-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: #6b1d3a;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.schedule-modal__title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+.schedule-modal__subtitle {
+  font-size: 0.9rem;
+  color: #999;
+  margin-bottom: 28px;
+}
+
+/* Selected Date Card */
+.schedule-modal__date-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border: 1.5px solid #e8d0d8;
+  border-radius: 12px;
+  background: #fdf5f8;
+  margin-bottom: 24px;
+  text-align: left;
+}
+.schedule-modal__date-card-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.schedule-modal__date-card-icon {
+  color: #6b1d3a;
+  flex-shrink: 0;
+}
+.schedule-modal__date-card-label {
+  display: block;
+  font-size: 0.75rem;
+  color: #999;
+  margin-bottom: 2px;
+}
+.schedule-modal__date-card-value {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+.schedule-modal__date-card-change {
+  background: none;
+  border: 1.5px solid #d4d4d4;
+  border-radius: 8px;
+  padding: 6px 16px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.schedule-modal__date-card-change:hover {
+  border-color: #6b1d3a;
+  color: #6b1d3a;
+}
+
+/* Date picker (expandable) */
+.schedule-modal__dates {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  animation: fadeIn 0.2s ease;
+}
+.schedule-modal__date-pill {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 8px;
+  border-radius: 12px;
+  background: #f5f5f5;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.schedule-modal__date-pill:hover {
+  border-color: #c9a85c;
+}
+.schedule-modal__date-pill--active {
+  background: #6b1d3a;
+  border-color: #6b1d3a;
+}
+.schedule-modal__date-num {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+.schedule-modal__date-day {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  color: #888;
+}
+.schedule-modal__date-pill--active .schedule-modal__date-num,
+.schedule-modal__date-pill--active .schedule-modal__date-day {
+  color: #fff;
+}
+
+/* Form */
+.schedule-modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 24px;
+  text-align: left;
+}
+.schedule-modal__field {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1.5px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 14px 16px;
+  transition: border-color 0.2s;
+  background: #fff;
+}
+.schedule-modal__field:focus-within {
+  border-color: #6b1d3a;
+}
+.schedule-modal__field--textarea {
+  align-items: flex-start;
+}
+.schedule-modal__field-icon {
+  color: #bbb;
+  flex-shrink: 0;
+}
+.schedule-modal__field-icon--top {
+  margin-top: 2px;
+}
+.schedule-modal__field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.schedule-modal__input {
+  border: none;
+  outline: none;
+  font-size: 0.92rem;
+  color: #1a1a1a;
+  width: 100%;
+  background: transparent;
+}
+.schedule-modal__input::placeholder {
+  color: #bbb;
+}
+.schedule-modal__textarea {
+  border: none;
+  outline: none;
+  font-size: 0.92rem;
+  color: #1a1a1a;
+  width: 100%;
+  background: transparent;
+  resize: none;
+  font-family: inherit;
+}
+.schedule-modal__textarea::placeholder {
+  color: #bbb;
+}
+
+/* Submit */
+.schedule-modal__submit {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 14px;
+  background: #6b1d3a;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.schedule-modal__submit:hover:not(:disabled) {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+.schedule-modal__submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Success */
+.schedule-modal__success {
+  text-align: center;
+  padding: 40px 0;
+}
+.schedule-modal__success-icon {
+  width: 56px;
+  height: 56px;
+  color: #4a7c4e;
+  margin: 0 auto 16px;
+}
+.schedule-modal__success-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+.schedule-modal__success p {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .support-section__inner {
+    grid-template-columns: 1fr 1fr;
+  }
+  .support-card--news {
+    grid-column: 1 / -1;
+  }
+  .support-card__image-wrap {
+    min-height: 260px;
+  }
+}
+@media (max-width: 540px) {
+  .support-section {
+    padding: 24px 16px 48px;
+  }
+  .support-section__inner {
+    grid-template-columns: 1fr;
+  }
+  .support-card--cta {
+    padding: 28px 24px;
+  }
+  .support-card--schedule {
+    padding: 24px 20px;
+  }
+  .support-card__dates {
+    gap: 6px;
+  }
+  .schedule-modal__field-row {
+    grid-template-columns: 1fr;
+  }
+}
