@@ -53,7 +53,7 @@ const Hero = () => {
       </div>
 
       {/* Rotating Text - Mobile (Positioned higher and smaller to avoid text overlap) */}
-      <div className="block md:hidden absolute top-28 right-4 z-40">
+      <div className="block md:hidden absolute top-40 right-4 z-40">
         <RotatingText containerClassName="w-[100px] h-[100px]" textClassName="text-[20px]" />
       </div>
     </section>

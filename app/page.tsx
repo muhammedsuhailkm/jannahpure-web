@@ -1,14 +1,12 @@
 // app/page.tsx
 import Hero from "@/components/Hero";
-import Portfolio from "@/components/portfolio";
-import Contact from "@/components/contact";
+import AboutSection from "@/components/AboutSection";
 
 export default function Page() {
   return (
     <main className="min-h-screen">
       <Hero />
-      <Portfolio />
-      <Contact />
+      <AboutSection />
     </main>
   );
 }

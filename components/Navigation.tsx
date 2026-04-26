@@ -1,86 +1,189 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import {
+  Phone,
+  Mail,
+  Building2,
+  Briefcase,
+  Facebook,
+  Instagram,
+  Linkedin,
+} from "lucide-react";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleClick = () => setIsMenuOpen(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="/" onClick={handleClick} className="flex-shrink-0">
-          <img
-            src="/logo-org.png"
-            alt="Logo"
-            className="h-14 md:h-16 w-auto object-contain dark:bg-white/90 dark:p-1 dark:rounded-md"
-          />
-        </Link>
+    <header className="fixed top-0 left-0 right-0 z-50">
+      {/* Green Top Bar */}
+      <div
+        className={`bg-[#4a7c4e] text-white transition-all duration-300 overflow-hidden ${
+          isScrolled ? "h-0 opacity-0" : "h-10 opacity-100"
+        }`}
+      >
+        <div className="container mx-auto px-6 h-full flex items-center justify-between gap-4">
+          {/* Left: Contact + Services */}
+          <div className="flex items-center gap-5 text-xs font-medium tracking-wide flex-wrap">
+            {/* Phone */}
+            <a
+              href="tel:+97158695350"
+              className="flex items-center gap-1.5 hover:text-green-100 transition-colors"
+            >
+              <Phone size={13} />
+              <span>+971 058695350</span>
+            </a>
 
-        {/* Right Side Group */}
-        <div className="hidden md:flex items-center space-x-12">
-          {/* Desktop Menu */}
-          <div className="flex items-center space-x-12">
-            <Link href="/about" onClick={handleClick}>
-              ABOUT
-            </Link>
-            <Link href="/services" onClick={handleClick}>
-              SERVICES
-            </Link>
-            <Link href="/gallery" onClick={handleClick}>
-              GALLERY
-            </Link>
-            <Link href="/contact" onClick={handleClick}>
-              CONTACT US
-            </Link>
+            {/* Divider */}
+            <span className="text-green-400 hidden sm:block">|</span>
+
+            {/* Email */}
+            <a
+              href="mailto:ops.betons@gmail.com"
+              className="flex items-center gap-1.5 hover:text-green-100 transition-colors"
+            >
+              <Mail size={13} />
+              <span>ops.betons@gmail.com</span>
+            </a>
+
+            {/* Divider */}
+            <span className="text-green-400 hidden lg:block">|</span>
+
+            {/* Company Formation */}
+            <span className="hidden lg:flex items-center gap-1.5">
+              <Building2 size={13} />
+              <span>Company Formation</span>
+            </span>
+
+            {/* Divider */}
+            <span className="text-green-400 hidden lg:block">|</span>
+
+            {/* Business Setup */}
+            <span className="hidden lg:flex items-center gap-1.5">
+              <Briefcase size={13} />
+              <span>Business Setup</span>
+            </span>
           </div>
 
-          {/* Theme Toggle */}
-          <div className="flex items-center">
-            <ThemeToggle />
+          {/* Right: Social Icons */}
+          <div className="flex items-center gap-3">
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="hover:text-green-600 transition-colors"
+            >
+              <Facebook size={15} />
+            </a>
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="hover:text-green-600 transition-colors"
+            >
+              <Instagram size={15} />
+            </a>
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="hover:text-green-600 transition-colors"
+            >
+              <Linkedin size={15} />
+            </a>
           </div>
         </div>
-
-        {/* Mobile Button */}
-        <Button
-          variant="ghost"
-          size="sm"
-          className="md:hidden"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          {isMenuOpen ? "✕" : "☰"}
-        </Button>
       </div>
 
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-background border-b border-border">
-          <div className="container mx-auto px-6 py-6 space-y-4 flex flex-col">
-            <Link href="/about" onClick={handleClick}>
-              ABOUT
-            </Link>
-            <Link href="/services" onClick={handleClick}>
-              SERVICES
-            </Link>
-            <Link href="/gallery" onClick={handleClick}>
-              GALLERY
-            </Link>
-            <Link href="/contact" onClick={handleClick}>
-              CONTACT US
-            </Link>
+      {/* Main Navigation */}
+      <nav className="bg-background/80 backdrop-blur-md border-b border-border shadow-sm">
+        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+          <Link href="/" onClick={handleClick} className="flex-shrink-0">
+            <img
+              src="/logo-org.png"
+              alt="Logo"
+              className="h-14 md:h-16 w-auto object-contain dark:bg-white/90 dark:p-1 dark:rounded-md"
+            />
+          </Link>
+
+          {/* Right Side Group */}
+          <div className="hidden md:flex items-center space-x-12">
+            {/* Desktop Menu */}
+            <div className="flex items-center space-x-12">
+              <Link href="/about" onClick={handleClick}>
+                ABOUT
+              </Link>
+              <Link href="/services" onClick={handleClick}>
+                SERVICES
+              </Link>
+              <Link href="/gallery" onClick={handleClick}>
+                GALLERY
+              </Link>
+              <Link href="/contact" onClick={handleClick}>
+                CONTACT US
+              </Link>
+            </div>
 
             {/* Theme Toggle */}
-            <div className="pt-4 border-t border-border">
+            <div className="flex items-center">
               <ThemeToggle />
             </div>
           </div>
+
+          {/* Mobile Button */}
+          <Button
+            variant="ghost"
+            size="sm"
+            className="md:hidden"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? "✕" : "☰"}
+          </Button>
         </div>
-      )}
-    </nav>
+
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="md:hidden bg-background border-b border-border">
+            <div className="container mx-auto px-6 py-6 space-y-4 flex flex-col">
+              <Link href="/about" onClick={handleClick}>
+                ABOUT
+              </Link>
+              <Link href="/services" onClick={handleClick}>
+                SERVICES
+              </Link>
+              <Link href="/gallery" onClick={handleClick}>
+                GALLERY
+              </Link>
+              <Link href="/contact" onClick={handleClick}>
+                CONTACT US
+              </Link>
+
+              {/* Theme Toggle */}
+              <div className="pt-4 border-t border-border">
+                <ThemeToggle />
+              </div>
+            </div>
+          </div>
+        )}
+      </nav>
+    </header>
   );
 };
 
