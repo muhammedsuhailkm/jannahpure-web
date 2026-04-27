@@ -1,12 +1,25 @@
 import Link from "next/link";
-import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Facebook,
+  Instagram,
+  Linkedin,
+} from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white pt-10 pb-5">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <footer className="relative text-white pt-10 pb-5 overflow-hidden">
+      {/* Background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/footerorg.jpg')" }}
+      />
+      {/* Dark overlay for readability */}
+      <div className="absolute inset-0 bg-black/75" />
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         <div className="mb-8 grid gap-7 md:grid-cols-3">
-
           {/* Column 1: Logo + Description + Socials */}
           <div className="md:col-span-1">
             <Link className="mb-4 inline-flex items-center gap-2" href="/">
@@ -80,12 +93,42 @@ const Footer = () => {
               </li>
             </ul>
 
-            <h4 className="mt-6 mb-3 text-lg font-semibold text-white">Quick Links</h4>
+            <h4 className="mt-6 mb-3 text-lg font-semibold text-white">
+              Quick Links
+            </h4>
             <ul className="space-y-2 text-white/80 text-sm">
-              <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
-              <li><Link href="/services" className="hover:text-white transition-colors">Services</Link></li>
-              <li><Link href="/gallery" className="hover:text-white transition-colors">Gallery</Link></li>
-              <li><Link href="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
+              <li>
+                <Link
+                  href="/about"
+                  className="hover:text-white transition-colors"
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="hover:text-white transition-colors"
+                >
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/gallery"
+                  className="hover:text-white transition-colors"
+                >
+                  Gallery
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="hover:text-white transition-colors"
+                >
+                  Contact Us
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -95,12 +138,15 @@ const Footer = () => {
             <div className="flex items-start gap-3 text-white/80">
               <MapPin className="mt-1 h-5 w-5 shrink-0 text-[#4a7c4e]" />
               <span className="leading-relaxed">
-                Business Bay, Dubai,<br />
+                Business Bay, Dubai,
+                <br />
                 United Arab Emirates
               </span>
             </div>
 
-            <h4 className="mt-6 mb-3 text-lg font-semibold text-white">Services</h4>
+            <h4 className="mt-6 mb-3 text-lg font-semibold text-white">
+              Services
+            </h4>
             <ul className="space-y-2 text-white/80 text-sm">
               <li>Company Formation</li>
               <li>Business Setup</li>
@@ -108,13 +154,13 @@ const Footer = () => {
               <li>Free Zone Services</li>
             </ul>
           </div>
-
         </div>
 
         {/* Bottom Bar */}
         <div className="flex flex-col items-center justify-between gap-2 border-t border-white/10 pt-4 text-center md:flex-row md:text-left">
           <p className="text-sm text-white/60">
-            © {new Date().getFullYear()} Betons Business Services. All rights reserved.
+            © {new Date().getFullYear()} Betons Business Services. All rights
+            reserved.
           </p>
           <p className="text-sm text-white/60">Dubai, United Arab Emirates</p>
         </div>

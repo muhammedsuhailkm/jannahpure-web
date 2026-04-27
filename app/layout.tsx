@@ -2,11 +2,14 @@
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import ServicesOverview from "@/components/ServicesOverview";
-import SupportSection from "@/components/SupportSection";
-import WhyChooseUs from "@/components/WhyChooseUs";
-import { ThemeProvider } from "@/components/ThemeProvider";
 
+import { ThemeProvider } from "@/components/ThemeProvider";
+import { Playfair_Display } from "next/font/google";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+});
 export default function RootLayout({
   children,
 }: {
@@ -18,9 +21,7 @@ export default function RootLayout({
         <ThemeProvider defaultTheme="light">
           <Navigation />
           {children}
-          <ServicesOverview />
-          <SupportSection />
-          <WhyChooseUs />
+
           <Footer />
         </ThemeProvider>
       </body>

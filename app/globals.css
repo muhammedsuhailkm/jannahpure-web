@@ -247,7 +247,7 @@
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
 
@@ -750,12 +750,6 @@
 @media (max-width: 900px) {
   .support-section__inner {
     grid-template-columns: 1fr 1fr;
-  }
-  .support-card--news {
-    grid-column: 1 / -1;
-  }
-  .support-card__image-wrap {
-    min-height: 260px;
   }
 }
 @media (max-width: 540px) {

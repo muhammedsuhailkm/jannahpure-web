@@ -132,7 +132,7 @@ const WhyChooseUs = () => {
   };
 
   return (
-    <section className="bg-[#141414] py-20 px-6">
+    <section className="bg-[#141414] py-16 px-6">
       <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
         {/* Left side */}
         <div className="flex-shrink-0 lg:w-[280px]">
@@ -176,7 +176,7 @@ const WhyChooseUs = () => {
             {features.map((feature) => (
               <div
                 key={feature.title.join(" ")}
-                className="flex-shrink-0 bg-[#1e1e1e] rounded-2xl p-7 flex flex-col justify-between min-h-[340px] border border-white/5 hover:border-white/15 transition-colors"
+                className="flex-shrink-0 bg-[#1e1e1e] rounded-2xl p-6 flex flex-col justify-between min-h-[280px] border border-white/5 hover:border-white/15 transition-colors"
                 style={{
                   width: `calc((100% - ${GAP * (VISIBLE - 1)}px) / ${VISIBLE})`,
                 }}

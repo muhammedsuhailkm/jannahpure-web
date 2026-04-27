@@ -13,7 +13,6 @@ import {
   Send,
   CheckCircle2,
 } from "lucide-react";
-import Image from "next/image";
 import { Playfair_Display } from "next/font/google";
 
 const playfair = Playfair_Display({ subsets: ["latin"] });
@@ -156,33 +155,7 @@ const SupportSection = () => {
     <>
       <section className="support-section">
         <div className="support-section__inner">
-          {/* ── Card 1: News / Announcement ── */}
-          <div className="support-card support-card--news">
-            <div className="support-card__image-wrap">
-              <Image
-                src="/uae.jpg"
-                alt="UAE National Day 2026"
-                fill
-                className="support-card__image"
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
-              <div className="support-card__image-overlay" />
-              <div className="support-card__image-content">
-                <span className="support-card__image-dot" />
-                <h3
-                  className={`support-card__image-title ${playfair.className}`}
-                >
-                  UAE National Day 2026 holiday
-                </h3>
-                <p className="support-card__image-desc">
-                  Eid Al Etihad expected on December 2–3, with the chance of an
-                  extended long weekend for residents
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* ── Card 2: Get Support ── */}
+          {/* ── Card 1: Get Support ── */}
           <div className="support-card support-card--cta">
             <h3 className={`support-card__heading ${playfair.className}`}>
               Hurry? Get Support
