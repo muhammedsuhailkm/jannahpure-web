@@ -11,13 +11,36 @@ import {
 const Footer = () => {
   return (
     <footer className="relative text-white pt-10 pb-5 overflow-hidden">
-      {/* Background image */}
+      {/* CSS gradient background */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/footerorg.jpg')" }}
+        className="absolute inset-0"
+        style={{
+          background: 'linear-gradient(135deg, #061a0e 0%, #0a2e1a 25%, #0f3d22 50%, #0d3520 75%, #071d11 100%)',
+        }}
       />
-      {/* Dark overlay for readability */}
-      <div className="absolute inset-0 bg-black/75" />
+      {/* Subtle radial glow accents */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background: 'radial-gradient(ellipse at 15% 30%, rgba(74,124,78,0.15) 0%, transparent 50%), radial-gradient(ellipse at 85% 70%, rgba(45,138,78,0.1) 0%, transparent 45%), radial-gradient(ellipse at 50% 0%, rgba(90,158,95,0.08) 0%, transparent 40%)',
+        }}
+      />
+      {/* Grid pattern overlay */}
+      <svg className="absolute inset-0 w-full h-full opacity-[0.04]" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="footer-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="0.5" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#footer-grid)" />
+      </svg>
+      {/* Decorative diagonal accent */}
+      <div
+        className="absolute -right-20 -top-20 h-[300px] w-[300px] rounded-full opacity-[0.03]"
+        style={{
+          background: 'radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%)',
+        }}
+      />
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         <div className="mb-8 grid gap-7 md:grid-cols-3">
           {/* Column 1: Logo + Description + Socials */}
