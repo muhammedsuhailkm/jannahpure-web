@@ -122,12 +122,6 @@ export default function ServicePointsSection() {
             Here&apos;s why thousands of entrepreneurs and corporations choose
             business setup in Dubai every year:
           </h2>
-          <p className="mt-6 max-w-xl text-sm text-white/40">
-            Tap any service to learn more. The section now sits on one side of
-            the layout so it stays cleaner on desktop and easier to browse on
-            mobile.
-          </p>
-
           <div className="mt-12 hidden rounded-[28px] border border-white/10 bg-[#071d11]/40 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.18)] lg:block">
             <div className="relative h-[680px] overflow-hidden rounded-[22px] border border-white/6 bg-[#08160f]/80">
               <svg
