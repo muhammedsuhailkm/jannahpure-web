@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
@@ -141,10 +142,14 @@ const Navigation = () => {
       <nav className="bg-background/80 backdrop-blur-md border-b border-border shadow-sm">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" onClick={handleClick} className="flex-shrink-0">
-            <img
+            <Image
               src="/logo-org.png"
               alt="Logo"
+              width={220}
+              height={64}
               className="h-14 md:h-16 w-auto object-contain dark:bg-white/90 dark:p-1 dark:rounded-md"
+              priority
+              sizes="(max-width: 768px) 160px, 220px"
             />
           </Link>
 

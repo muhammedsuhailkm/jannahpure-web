@@ -1,19 +1,18 @@
 import Image from "next/image";
-import { Playfair_Display } from "next/font/google";
+import { playfair } from "@/lib/fonts";
 import RotatingText from "./RotatingText";
-
-const playfair = Playfair_Display({ subsets: ["latin"] });
 
 const Hero = () => {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <Image
-        src="/home.jpg" // 👈 place image in /public
+        src="/home-hero.jpg"
         alt="Architecture"
         fill
         priority
         className="object-cover"
+        sizes="100vw"
       />
 
       {/* Gradient Overlay for Text Readability */}

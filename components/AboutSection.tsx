@@ -1,7 +1,5 @@
 import Image from "next/image";
-import { Playfair_Display } from "next/font/google";
-
-const playfair = Playfair_Display({ subsets: ["latin"] });
+import { playfair } from "@/lib/fonts";
 
 const AboutSection = () => {
   return (

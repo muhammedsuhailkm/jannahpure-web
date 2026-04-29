@@ -1,17 +1,17 @@
 import Image from "next/image";
-import { Playfair_Display } from "next/font/google";
+import { playfair } from "@/lib/fonts";
 
-const playfair = Playfair_Display({ subsets: ["latin"] });
+const primaryGalleryImage = "/project-1.jpg";
 
 const galleryItems = [
   // Row 1
-  { src: "/project-1.jpg", label: "Corporate Offices", span: "col-span-1", height: "h-[320px] md:h-[380px]" },
-  { src: "/project-2.jpg", label: "Business Bay Hub", span: "col-span-1 md:col-span-1", height: "h-[320px] md:h-[380px]" },
-  { src: "/project-3.jpg", label: "Dubai Skyline", span: "col-span-1", height: "h-[320px] md:h-[380px]" },
+  { src: primaryGalleryImage, label: "Corporate Offices", span: "col-span-1", height: "h-[320px] md:h-[380px]" },
+  { src: primaryGalleryImage, label: "Business Bay Hub", span: "col-span-1 md:col-span-1", height: "h-[320px] md:h-[380px]" },
+  { src: primaryGalleryImage, label: "Dubai Skyline", span: "col-span-1", height: "h-[320px] md:h-[380px]" },
   // Row 2
-  { src: "/hero-architecture.jpg", label: "Consultation Rooms", span: "col-span-1 md:col-span-1", height: "h-[320px] md:h-[380px]" },
-  { src: "/services1.jpg", label: "Client Meetings", span: "col-span-1", height: "h-[320px] md:h-[380px]" },
-  { src: "/uae.jpg", label: "UAE Landmarks", span: "col-span-1", height: "h-[320px] md:h-[380px]" },
+  { src: primaryGalleryImage, label: "Consultation Rooms", span: "col-span-1 md:col-span-1", height: "h-[320px] md:h-[380px]" },
+  { src: primaryGalleryImage, label: "Client Meetings", span: "col-span-1", height: "h-[320px] md:h-[380px]" },
+  { src: primaryGalleryImage, label: "UAE Landmarks", span: "col-span-1", height: "h-[320px] md:h-[380px]" },
 ];
 
 export default function GalleryPage() {
@@ -46,6 +46,7 @@ export default function GalleryPage() {
                   alt={item.label}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 {/* Gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
@@ -71,6 +72,7 @@ export default function GalleryPage() {
                   alt={item.label}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 {/* Gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500" />

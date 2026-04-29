@@ -1,8 +1,6 @@
 import Image from "next/image";
-import { Playfair_Display } from "next/font/google";
+import { playfair } from "@/lib/fonts";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
-
-const playfair = Playfair_Display({ subsets: ["latin"] });
 
 const stickyContent = [
   {
@@ -47,11 +45,12 @@ const AboutPage = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/home1.jpg"
+            src="/home1-hero.jpg"
             alt="About Us"
             fill
             className="object-cover object-top"
             priority
+            sizes="100vw"
           />
         </div>
 
@@ -124,6 +123,7 @@ const AboutPage = () => {
                 alt="Innovative Solutions"
                 fill
                 className="object-cover rounded-t-[30px] rounded-b-[30px]"
+                sizes="(max-width: 768px) 100vw, 33vw"
               />
             </div>
 
@@ -147,6 +147,7 @@ const AboutPage = () => {
                 alt="Personalized Support"
                 fill
                 className="object-cover rounded-t-[30px] rounded-b-[30px]"
+                sizes="(max-width: 768px) 100vw, 33vw"
               />
             </div>
 
@@ -170,6 +171,7 @@ const AboutPage = () => {
                 alt="Cost Efficiency"
                 fill
                 className="object-cover rounded-t-[30px] rounded-b-[30px]"
+                sizes="(max-width: 768px) 100vw, 33vw"
               />
             </div>
 
@@ -197,11 +199,11 @@ const AboutPage = () => {
       <div className="relative w-full h-[90vh] flex items-center group overflow-hidden">
         {/* Background Image */}
         <Image
-          src="/new.png"
+          src="/new-hero.jpg"
           alt="Hero"
           fill
-          priority
           className="object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
+          sizes="100vw"
         />
 
         {/* Dark Overlay */}

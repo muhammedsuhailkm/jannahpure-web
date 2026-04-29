@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   Mail,
@@ -15,14 +16,16 @@ const Footer = () => {
       <div
         className="absolute inset-0"
         style={{
-          background: 'linear-gradient(135deg, #061a0e 0%, #0a2e1a 25%, #0f3d22 50%, #0d3520 75%, #071d11 100%)',
+          background:
+            "linear-gradient(135deg, #1f3f2b 0%, #2d5a3d 30%, #3a734f 60%, #2d5a3d 100%)",
         }}
       />
       {/* Subtle radial glow accents */}
       <div
         className="absolute inset-0"
         style={{
-          background: 'radial-gradient(ellipse at 15% 30%, rgba(74,124,78,0.15) 0%, transparent 50%), radial-gradient(ellipse at 85% 70%, rgba(45,138,78,0.1) 0%, transparent 45%), radial-gradient(ellipse at 50% 0%, rgba(90,158,95,0.08) 0%, transparent 40%)',
+          background:
+            "radial-gradient(ellipse at 15% 30%, rgba(45, 90, 61, 0.22) 0%, transparent 52%), radial-gradient(ellipse at 85% 70%, rgba(58, 115, 79, 0.16) 0%, transparent 45%), radial-gradient(ellipse at 50% 0%, rgba(102, 150, 116, 0.12) 0%, transparent 40%)",
         }}
       />
       {/* Grid pattern overlay */}
@@ -47,15 +50,17 @@ const Footer = () => {
           <div className="md:col-span-1">
             <Link className="mb-4 inline-flex items-center gap-2" href="/">
               <span className="inline-flex rounded-xl bg-white px-3 py-2 shadow-[0_8px_22px_-12px_rgba(255,255,255,0.5)]">
-                <img
+                <Image
                   src="/logo-org.png"
                   alt="Betons Logo"
+                  width={190}
+                  height={48}
                   className="h-12 w-auto"
-                  loading="lazy"
+                  sizes="190px"
                 />
               </span>
             </Link>
-            <p className="max-w-md text-sm leading-relaxed text-white/80">
+            <p className="max-w-md text-sm leading-relaxed text-white">
               Betons Business Services is your trusted partner for company
               formation, business setup, and document clearing across the UAE.
               We deliver reliable, compliant, and efficient solutions tailored
@@ -95,7 +100,7 @@ const Footer = () => {
           {/* Column 2: Contact */}
           <div>
             <h4 className="mb-3 text-lg font-semibold text-white">Contact</h4>
-            <ul className="space-y-3 text-white/80">
+            <ul className="space-y-3 text-white">
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-[#4a7c4e]" />
                 <a
@@ -119,7 +124,7 @@ const Footer = () => {
             <h4 className="mt-6 mb-3 text-lg font-semibold text-white">
               Quick Links
             </h4>
-            <ul className="space-y-2 text-white/80 text-sm">
+            <ul className="space-y-2 text-white text-sm">
               <li>
                 <Link
                   href="/about"
@@ -158,7 +163,7 @@ const Footer = () => {
           {/* Column 3: Address */}
           <div>
             <h4 className="mb-3 text-lg font-semibold text-white">Address</h4>
-            <div className="flex items-start gap-3 text-white/80">
+            <div className="flex items-start gap-3 text-white">
               <MapPin className="mt-1 h-5 w-5 shrink-0 text-[#4a7c4e]" />
               <span className="leading-relaxed">
                 Business Bay, Dubai,
@@ -170,7 +175,7 @@ const Footer = () => {
             <h4 className="mt-6 mb-3 text-lg font-semibold text-white">
               Services
             </h4>
-            <ul className="space-y-2 text-white/80 text-sm">
+            <ul className="space-y-2 text-white text-sm">
               <li>Company Formation</li>
               <li>Business Setup</li>
               <li>Document Clearing</li>
@@ -181,11 +186,11 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="flex flex-col items-center justify-between gap-2 border-t border-white/10 pt-4 text-center md:flex-row md:text-left">
-          <p className="text-sm text-white/60">
+          <p className="text-sm text-white">
             © {new Date().getFullYear()} Betons Business Services. All rights
             reserved.
           </p>
-          <p className="text-sm text-white/60">Dubai, United Arab Emirates</p>
+          <p className="text-sm text-white">Dubai, United Arab Emirates</p>
         </div>
       </div>
     </footer>

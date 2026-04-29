@@ -117,6 +117,9 @@
   * {
     @apply border-border outline-ring/50;
   }
+  .font-display {
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
   body {
     @apply bg-background text-foreground;
   }

@@ -1,9 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Playfair_Display } from "next/font/google";
+import { playfair } from "@/lib/fonts";
 import ServicePointsSection from "@/components/ServicePointsSection";
-
-const playfair = Playfair_Display({ subsets: ["latin"] });
 
 export default function BusinessSetupPage() {
   return (
@@ -48,7 +46,7 @@ export default function BusinessSetupPage() {
           alt=""
           fill
           className="object-cover"
-          priority
+          sizes="100vw"
         />
         {/* Light tint overlay */}
         <div className="absolute inset-0 bg-white/90 dark:bg-black/85" />
@@ -191,11 +189,12 @@ export default function BusinessSetupPage() {
           alt=""
           fill
           className="object-cover"
+          sizes="100vw"
         />
         {/* Dark overlay for text contrast */}
         <div className="absolute inset-0 bg-black/30" />
 
-        <div className="relative z-10 mx-auto max-w-4xl px-6 py-2 text-center md:py-6">
+        <div className="relative z-10 mx-auto max-w-4xl px-6 py-20 text-center md:py-24">
           <h2
             className={`text-2xl leading-[1.35] text-white md:text-3xl lg:text-[2.5rem] ${playfair.className}`}
           >

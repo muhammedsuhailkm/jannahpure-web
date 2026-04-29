@@ -13,9 +13,7 @@ import {
   Send,
   CheckCircle2,
 } from "lucide-react";
-import { Playfair_Display } from "next/font/google";
-
-const playfair = Playfair_Display({ subsets: ["latin"] });
+import { playfair } from "@/lib/fonts";
 
 const WHATSAPP_NUMBER = "97158695350";
 const PHONE_NUMBER = "+97158695350";
