@@ -103,13 +103,32 @@ const features = [
   },
 ];
 
-const VISIBLE = 3;
 const GAP = 20; // px gap between cards
 
 const WhyChooseUs = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const maxIndex = features.length - VISIBLE;
+  const [visibleCount, setVisibleCount] = useState(3);
   const trackRef = useRef<HTMLDivElement>(null);
+
+  // Responsive: 1 card on mobile, 2 on tablet, 3 on desktop
+  useEffect(() => {
+    const updateVisible = () => {
+      const w = window.innerWidth;
+      if (w < 640) setVisibleCount(1);
+      else if (w < 1024) setVisibleCount(2);
+      else setVisibleCount(3);
+    };
+    updateVisible();
+    window.addEventListener("resize", updateVisible);
+    return () => window.removeEventListener("resize", updateVisible);
+  }, []);
+
+  const maxIndex = Math.max(0, features.length - visibleCount);
+
+  // Reset activeIndex when visibleCount changes so we don't overshoot
+  useEffect(() => {
+    setActiveIndex((prev) => Math.min(prev, maxIndex));
+  }, [maxIndex]);
 
   const advance = useCallback(() => {
     setActiveIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
@@ -125,12 +144,12 @@ const WhyChooseUs = () => {
   const getTranslateX = () => {
     if (!trackRef.current) return 0;
     const containerWidth = trackRef.current.offsetWidth;
-    const cardWidth = (containerWidth - GAP * (VISIBLE - 1)) / VISIBLE;
+    const cardWidth = (containerWidth - GAP * (visibleCount - 1)) / visibleCount;
     return -(activeIndex * (cardWidth + GAP));
   };
 
   return (
-    <section className="bg-[#141414] py-16 px-6">
+    <section className="bg-[#141414] py-16 px-6 overflow-x-hidden">
       <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
         {/* Left side */}
         <div className="flex-shrink-0 lg:w-[280px]">
@@ -153,7 +172,7 @@ const WhyChooseUs = () => {
                 key={i}
                 onClick={() => setActiveIndex(Math.min(i, maxIndex))}
                 className={`rounded-full transition-all duration-300 ${
-                  i >= activeIndex && i < activeIndex + VISIBLE
+                  i >= activeIndex && i < activeIndex + visibleCount
                     ? "w-3 h-3 bg-white"
                     : "w-2.5 h-2.5 bg-white/25 hover:bg-white/50"
                 }`}
@@ -163,7 +182,7 @@ const WhyChooseUs = () => {
         </div>
 
         {/* Right side: Sliding carousel */}
-        <div className="flex-1 overflow-hidden" ref={trackRef}>
+        <div className="w-full lg:flex-1 min-w-0 overflow-hidden" ref={trackRef}>
           <div
             className="flex transition-transform duration-700 ease-in-out"
             style={{
@@ -176,7 +195,7 @@ const WhyChooseUs = () => {
                 key={feature.title.join(" ")}
                 className="flex-shrink-0 bg-[#1e1e1e] rounded-2xl p-6 flex flex-col justify-between min-h-[280px] border border-white/5 hover:border-white/15 transition-colors"
                 style={{
-                  width: `calc((100% - ${GAP * (VISIBLE - 1)}px) / ${VISIBLE})`,
+                  width: `calc((100% - ${GAP * (visibleCount - 1)}px) / ${visibleCount})`,
                 }}
               >
                 <div>
