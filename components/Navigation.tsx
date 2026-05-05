@@ -62,28 +62,28 @@ const Navigation = () => {
           isScrolled ? "h-0 opacity-0" : "h-10 opacity-100"
         }`}
       >
-        <div className="container mx-auto px-6 h-full flex items-center justify-between gap-4">
+        <div className="container mx-auto px-4 sm:px-6 h-full flex items-center justify-between gap-2 sm:gap-4">
           {/* Left: Contact + Services */}
-          <div className="flex items-center gap-5 text-xs font-medium tracking-wide flex-wrap">
+          <div className="flex items-center gap-3 sm:gap-5 text-xs font-medium tracking-wide min-w-0">
             {/* Phone */}
             <a
               href="tel:+97158695350"
-              className="flex items-center gap-1.5 hover:text-green-100 transition-colors"
+              className="flex items-center gap-1.5 hover:text-green-100 transition-colors shrink-0"
             >
-              <Phone size={13} />
-              <span>+971 058695350</span>
+              <Phone size={13} className="shrink-0" />
+              <span className="whitespace-nowrap">+971 058695350</span>
             </a>
 
             {/* Divider */}
             <span className="text-green-400 hidden sm:block">|</span>
 
-            {/* Email */}
+            {/* Email - hidden on small mobile */}
             <a
               href="mailto:ops.betons@gmail.com"
-              className="flex items-center gap-1.5 hover:text-green-100 transition-colors"
+              className="hidden sm:flex items-center gap-1.5 hover:text-green-100 transition-colors min-w-0"
             >
-              <Mail size={13} />
-              <span>ops.betons@gmail.com</span>
+              <Mail size={13} className="shrink-0" />
+              <span className="truncate">ops.betons@gmail.com</span>
             </a>
 
             {/* Divider */}
@@ -106,7 +106,7 @@ const Navigation = () => {
           </div>
 
           {/* Right: Social Icons */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
             <a
               href="#"
               target="_blank"
@@ -305,4 +305,3 @@ const Navigation = () => {
 };
 
 export default Navigation;
-
