@@ -4,6 +4,11 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 import { ThemeProvider } from "@/components/ThemeProvider";
+
+export const metadata = {
+  title: "Betons.ae",
+};
+
 export default function RootLayout({
   children,
 }: {
