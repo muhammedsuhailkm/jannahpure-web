@@ -67,11 +67,11 @@ const Navigation = () => {
           <div className="flex items-center gap-3 sm:gap-5 text-xs font-medium tracking-wide min-w-0">
             {/* Phone */}
             <a
-              href="tel:+97158695350"
+              href="tel:+971586695350"
               className="flex items-center gap-1.5 hover:text-green-100 transition-colors shrink-0"
             >
               <Phone size={13} className="shrink-0" />
-              <span className="whitespace-nowrap">+971 058695350</span>
+              <span className="whitespace-nowrap">+971 586695350</span>
             </a>
 
             {/* Divider */}

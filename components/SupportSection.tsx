@@ -15,8 +15,8 @@ import {
 } from "lucide-react";
 import { playfair } from "@/lib/fonts";
 
-const WHATSAPP_NUMBER = "97158695350";
-const PHONE_NUMBER = "+97158695350";
+const WHATSAPP_NUMBER = "971586695350";
+const PHONE_NUMBER = "+971586695350";
 
 /* ── Helper: generate week dates starting from today ── */
 function getWeekDates() {

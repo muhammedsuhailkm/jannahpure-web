@@ -97,10 +97,10 @@ function ContactPanel() {
           </h4>
           <div className="mx-auto mt-3 h-px w-full max-w-[420px] bg-[#0f3d22]/10" />
           <a
-            href="tel:+97158695350"
+            href="tel:+971586695350"
             className="mt-4 block text-[0.98rem] text-[#1a3a24] transition-colors hover:text-[#2d8a4e] lg:text-[1.02rem]"
           >
-            +971 058 695 350
+            +971 586695350
           </a>
           <p className="mt-5 text-xs uppercase tracking-[0.24em] text-[#0f3d22]/40">
             Business Bay, Dubai

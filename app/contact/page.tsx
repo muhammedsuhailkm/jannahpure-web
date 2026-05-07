@@ -52,7 +52,7 @@ export default function ContactPage() {
       `*Message:* ${form.message}`,
     ].join("%0a");
 
-    const whatsappNumber = "97158695350";
+    const whatsappNumber = "971586695350";
     window.open(
       `https://wa.me/${whatsappNumber}?text=${text}`,
       "_blank"
@@ -105,10 +105,10 @@ export default function ContactPage() {
                     Get In Touch
                   </h3>
                   <a
-                    href="tel:+97158695350"
+                    href="tel:+971586695350"
                     className="text-[15px] text-black/60 dark:text-white/60 hover:text-[#2d8a4e] transition-colors"
                   >
-                    +971 058 695 350
+                    +971 586695350
                   </a>
                 </div>
               </div>
@@ -180,7 +180,7 @@ export default function ContactPage() {
                 </a>
                 {/* WhatsApp */}
                 <a
-                  href="https://wa.me/97158695350"
+                  href="https://wa.me/971586695350"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center w-11 h-11 rounded-full border border-black/15 dark:border-white/15 text-black/50 dark:text-white/50 hover:border-[#25d366] hover:text-[#25d366] transition-all duration-300"
