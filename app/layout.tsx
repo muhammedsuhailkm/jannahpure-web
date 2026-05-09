@@ -2,8 +2,11 @@
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Script from "next/script";
 
 import { ThemeProvider } from "@/components/ThemeProvider";
+
+const GA_ID = "G-5BZE4N1L9B";
 
 export const metadata = {
   title: "Betons – Business Services",
@@ -30,6 +33,20 @@ export default function RootLayout({
 
           <Footer />
         </ThemeProvider>
+
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_ID}');
+          `}
+        </Script>
       </body>
     </html>
   );
