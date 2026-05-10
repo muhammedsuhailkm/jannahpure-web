@@ -3,6 +3,31 @@ import Link from "next/link";
 import { playfair } from "@/lib/fonts";
 import ServicePointsSection from "@/components/ServicePointsSection";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Company Formation in Dubai – Expert Setup Services",
+  description:
+    "Start your company in Dubai with Betons. We provide expert company formation services including legal compliance, documentation, and professional support across UAE jurisdictions.",
+  alternates: {
+    canonical: "https://www.betons.ae/services/company-formation",
+  },
+  openGraph: {
+    title: "Company Formation in Dubai – Betons Business Services",
+    description:
+      "Expert company formation services in Dubai. Legal compliance, documentation handling, and professional guidance for your UAE business.",
+    url: "https://www.betons.ae/services/company-formation",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Company Formation Services in Dubai – Betons",
+      },
+    ],
+  },
+};
+
 export default function CompanyFormationPage() {
   return (
     <main className="min-h-screen">

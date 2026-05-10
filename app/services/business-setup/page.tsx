@@ -3,6 +3,31 @@ import Link from "next/link";
 import { playfair } from "@/lib/fonts";
 import ServicePointsSection from "@/components/ServicePointsSection";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Business Setup in UAE – 100% Foreign Ownership",
+  description:
+    "Set up your business in the UAE with 100% foreign ownership. Betons offers end-to-end business setup solutions including licensing, compliance, and strategic planning in Dubai.",
+  alternates: {
+    canonical: "https://www.betons.ae/services/business-setup",
+  },
+  openGraph: {
+    title: "Business Setup in UAE – Betons Business Services",
+    description:
+      "Complete business setup solutions in the UAE with 100% foreign ownership. Licensing, compliance, and strategic planning for your success.",
+    url: "https://www.betons.ae/services/business-setup",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Business Setup Services in UAE – Betons",
+      },
+    ],
+  },
+};
+
 export default function BusinessSetupPage() {
   return (
     <main className="min-h-screen">

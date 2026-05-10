@@ -1,6 +1,31 @@
 import Image from "next/image";
 import { playfair } from "@/lib/fonts";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Gallery – Our Work & Projects in Dubai",
+  description:
+    "Explore the Betons Business Services gallery showcasing our corporate offices, consultation spaces, and successful business setup projects across Dubai, UAE.",
+  alternates: {
+    canonical: "https://www.betons.ae/gallery",
+  },
+  openGraph: {
+    title: "Gallery – Betons Business Services Projects in Dubai",
+    description:
+      "View our portfolio of corporate offices, client spaces, and business setup projects across Dubai, UAE.",
+    url: "https://www.betons.ae/gallery",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Betons Business Services Gallery – Dubai, UAE",
+      },
+    ],
+  },
+};
+
 const primaryGalleryImage = "/project-1.jpg";
 
 const galleryItems = [

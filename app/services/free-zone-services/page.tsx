@@ -3,6 +3,31 @@ import Link from "next/link";
 import { playfair } from "@/lib/fonts";
 import ServicePointsSection from "@/components/ServicePointsSection";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Free Zone Company Setup in UAE – DMCC, JAFZA & More",
+  description:
+    "Set up your free zone company in Dubai and the UAE with Betons. Expert guidance for DMCC, JAFZA, DAFZA, IFZA, and 40+ free zones with 100% foreign ownership and zero import duty.",
+  alternates: {
+    canonical: "https://www.betons.ae/services/free-zone-services",
+  },
+  openGraph: {
+    title: "Free Zone Company Setup in UAE – Betons Business Services",
+    description:
+      "Launch your business in UAE free zones with 100% ownership. Expert setup for DMCC, JAFZA, DAFZA, and more.",
+    url: "https://www.betons.ae/services/free-zone-services",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Free Zone Company Setup in UAE – Betons",
+      },
+    ],
+  },
+};
+
 export default function FreeZoneServicesPage() {
   return (
     <main className="min-h-screen">

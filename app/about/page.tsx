@@ -2,6 +2,31 @@ import Image from "next/image";
 import { playfair } from "@/lib/fonts";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us – Our Story, Mission & Vision",
+  description:
+    "Learn about Betons Business Services – a trusted Dubai-based consultancy empowering startups and businesses with strategic guidance, company formation, and tailored solutions in the UAE.",
+  alternates: {
+    canonical: "https://www.betons.ae/about",
+  },
+  openGraph: {
+    title: "About Betons Business Services – Our Story & Values",
+    description:
+      "Discover how Betons empowers startups and enterprises with strategic guidance, company formation, and business solutions in Dubai, UAE.",
+    url: "https://www.betons.ae/about",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "About Betons Business Services – Dubai, UAE",
+      },
+    ],
+  },
+};
+
 const stickyContent = [
   {
     title: "Our Mission",

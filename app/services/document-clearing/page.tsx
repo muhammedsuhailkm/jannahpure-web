@@ -3,6 +3,31 @@ import Link from "next/link";
 import { playfair } from "@/lib/fonts";
 import ServicePointsSection from "@/components/ServicePointsSection";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Document Clearing & PRO Services in Dubai",
+  description:
+    "Professional document clearing and PRO services in Dubai. Betons handles visa processing, document attestation, trade license renewals, and government liaison across the UAE.",
+  alternates: {
+    canonical: "https://www.betons.ae/services/document-clearing",
+  },
+  openGraph: {
+    title: "Document Clearing & PRO Services – Betons Dubai",
+    description:
+      "Hassle-free document clearing, visa processing, attestation, and PRO services in Dubai. Let Betons handle your government paperwork.",
+    url: "https://www.betons.ae/services/document-clearing",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Document Clearing & PRO Services in Dubai – Betons",
+      },
+    ],
+  },
+};
+
 export default function DocumentClearingPage() {
   return (
     <main className="min-h-screen">
