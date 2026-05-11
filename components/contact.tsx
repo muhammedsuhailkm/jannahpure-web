@@ -34,10 +34,10 @@ const Contact = () => {
                     PHONE
                   </h4>
                   <a
-                    href="tel:+971586695350"
+                    href="tel:+97455899831"
                     className="text-xl hover:text-muted-foreground transition-colors duration-300"
                   >
-                    +971 586695350
+                    +974 55899831
                   </a>
                 </div>
 
@@ -46,9 +46,11 @@ const Contact = () => {
                     STUDIO
                   </h4>
                   <address className="text-xl not-italic">
-                    123 Design Avenue
+                    الدوحة الجديدة، مبنى رقم: 71،
                     <br />
-                    New York, NY 10001
+                    الطابق الخامس، مكتب رقم: 10
+                    <br />
+                    الدوحة، قطر
                   </address>
                 </div>
               </div>

@@ -2,28 +2,28 @@ import { playfair } from "@/lib/fonts";
 
 const services = [
   {
-    title: ["Business", "Setup"],
+    title: ["فلاتر", "المطابخ"],
     description:
-      "End-to-end business setup solutions including trade license, office space, and PRO services across the UAE.",
+      "تنقية موثوقة من 5 و 7 مراحل مع إثراء بالمعادن لمياه شرب نقية وآمنة وصحية أكثر.",
   },
   {
-    title: ["Company", "Formation"],
+    title: ["فلتر", "الغسيل العكسي"],
     description:
-      "Obtain a comprehensive package for Mainland LLC & Freezone Company Formation in Dubai with full legal compliance.",
+      "نظام تنقية عالي السعة مزود بتقنية التنظيف الذاتي للغسيل العكسي، مما يضمن عمرًا أطول وصيانة أقل.",
   },
   {
-    title: ["Document", "Clearing"],
+    title: ["فلاتر", "متعددة المراحل"],
     description:
-      "Fast and reliable document clearing, attestation, and government liaison services for all your business needs.",
+      "حلول مرنة لتلبية الاحتياجات المتنوعة، وإزالة الرواسب والكلور والمعادن الثقيلة بفعالية.",
   },
   {
-    title: ["Freezone", "Services"],
+    title: ["فلتر", "جامبو"],
     description:
-      "Strategic freezone company formation with 100% ownership, zero tax benefits, and streamlined visa processing.",
+      "فلتر عالي السعة مصمم للمنازل والمطاعم والمرافق التي تتطلب تنقية مياه عالية الأداء.",
   },
 ];
 
-const colors = ["#2d5a3d", "#1e3a5f", "#2d5a3d", "#1e3a5f"];
+const colors = ["#1e3a8a", "#1e40af", "#1e3a8a", "#1e40af"];
 
 const ServicesOverview = () => {
   return (
@@ -36,7 +36,7 @@ const ServicesOverview = () => {
             style={{ backgroundColor: colors[index] }}
           >
             <h3
-              className={`text-2xl font-normal mb-4 leading-tight tracking-tight text-white ${playfair.className}`}
+              className={`text-2xl font-bold mb-4 leading-tight tracking-tight text-white ${playfair.className}`}
             >
               {service.title[0]}
               <br />

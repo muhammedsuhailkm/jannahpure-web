@@ -5,37 +5,36 @@ export default function RotatingText({
   containerClassName?: string;
   textClassName?: string;
 }) {
+  const rotatingText = "تنقية متطورة • نقاء لا مثيل له في قطر • ";
+  const letters = Array.from(rotatingText);
+
   return (
     <div
-      className={`relative flex items-center justify-center bg-[#111] rounded-full text-white shadow-2xl ${containerClassName}`}
+      className={`relative flex items-center justify-center bg-[#111] rounded-full text-white shadow-2xl overflow-hidden ${containerClassName}`}
     >
       <svg
-        viewBox="0 0 200 200"
-        className="absolute w-full h-full animate-[spin_10s_linear_infinite]"
+        viewBox="0 0 100 100"
+        className="absolute inset-0 h-full w-full animate-[spin_10s_linear_infinite]"
+        aria-hidden="true"
       >
-        <defs>
-          <path
-            id="circlePath"
-            d="M 100, 100
-               m -75, 0
-               a 75,75 0 1,1 150,0
-               a 75,75 0 1,1 -150,0"
-          />
-        </defs>
-
-        <text fill="white" fontSize="19">
-          <textPath
-            href="#circlePath"
-            startOffset="0%"
-            textLength="471"
-            lengthAdjust="spacing"
+        {letters.map((letter, index) => (
+          <text
+            key={`${letter}-${index}`}
+            x="50"
+            y="9"
+            fill="currentColor"
+            fontSize="7.2"
+            fontWeight="500"
+            textAnchor="middle"
+            dominantBaseline="middle"
+            transform={`rotate(${(360 / letters.length) * index} 50 50)`}
           >
-            OWN &amp; GROW YOUR BUSINESS IN UAE •
-          </textPath>
-        </text>
+            {letter}
+          </text>
+        ))}
       </svg>
 
-      <div className={`${textClassName} font-light`}>100%</div>
+      <div className={`relative z-10 ${textClassName} font-light`}>100%</div>
     </div>
   );
 }

@@ -5,23 +5,23 @@ import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Us – Our Story, Mission & Vision",
+  title: "من نحن – جنة بيور",
   description:
-    "Learn about Betons Business Services – a trusted Dubai-based consultancy empowering startups and businesses with strategic guidance, company formation, and tailored solutions in the UAE.",
+    "جنة بيور هي شركة قطرية رائدة متخصصة في أنظمة تنقية المياه المركزية وحلول معالجتها.",
   alternates: {
-    canonical: "https://www.betons.ae/about",
+    canonical: "https://www.jannahpure.com/about",
   },
   openGraph: {
-    title: "About Betons Business Services – Our Story & Values",
+    title: "عن جنة بيور – قصتنا وقيمنا",
     description:
-      "Discover how Betons empowers startups and enterprises with strategic guidance, company formation, and business solutions in Dubai, UAE.",
-    url: "https://www.betons.ae/about",
+      "جنة بيور هي شركة قطرية رائدة متخصصة في أنظمة تنقية المياه المركزية وحلول معالجتها.",
+    url: "https://www.jannahpure.com/about",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "About Betons Business Services – Dubai, UAE",
+        alt: "عن جنة بيور – قطر",
       },
     ],
   },
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
 
 const stickyContent = [
   {
-    title: "Our Mission",
+    title: "مهمتنا",
     description:
-      "To empower startups and established businesses with strategic guidance, seamless company formation, and tailored business solutions. We are committed to simplifying the complexities of the UAE market, ensuring our clients achieve sustainable growth and long-term success.",
+      "تقديم حلول متكاملة وموثوقة تعزز من جودة حياة عملائنا.",
     content: (
       <div className="flex h-full w-full items-center justify-center text-white bg-muted/20">
         <Image
@@ -39,15 +39,15 @@ const stickyContent = [
           width={400}
           height={400}
           className="h-full w-full object-cover"
-          alt="Our Mission"
+          alt="مهمتنا"
         />
       </div>
     ),
   },
   {
-    title: "Our Vision",
+    title: "رؤيتنا",
     description:
-      "To be the premier business consultancy in the UAE, recognized for our unwavering integrity, innovative strategies, and deep local expertise. We envision a future where every entrepreneur and organization we partner with realizes their full potential in a thriving global economy.",
+      "أن نكون الخيار الأول في قطر لحلول المياه الآمنة والصحية.",
     content: (
       <div className="flex h-full w-full items-center justify-center text-white bg-muted/20">
         <Image
@@ -55,7 +55,7 @@ const stickyContent = [
           width={400}
           height={400}
           className="h-full w-full object-cover"
-          alt="Our Vision"
+          alt="رؤيتنا"
         />
       </div>
     ),
@@ -64,14 +64,14 @@ const stickyContent = [
 
 const AboutPage = () => {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen text-right">
       {/* About Hero Section */}
       <section className="relative h-[60vh] min-h-[400px] md:h-[500px] flex items-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/home1-hero.jpg"
-            alt="About Us"
+            src="/aboutfit.png"
+            alt="من نحن"
             fill
             className="object-cover object-top"
             priority
@@ -81,19 +81,19 @@ const AboutPage = () => {
 
         {/* Full Image Overlay for text readability */}
         <div className="absolute inset-0 bg-black/40" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-l from-black/60 via-black/30 to-transparent" />
 
         {/* Content */}
         <div className="relative z-10 container mx-auto px-6 lg:px-12 mt-16 md:mt-24">
           <h1
             className={`text-5xl md:text-7xl lg:text-8xl text-white mb-6 drop-shadow-md ${playfair.className}`}
           >
-            Our Story
+            قصتنا
           </h1>
           <div className="flex items-center gap-2 text-white/90 text-sm md:text-base tracking-wide drop-shadow-sm">
-            <span>Pages</span>
+            <span>الصفحات</span>
             <span>/</span>
-            <span>About Us</span>
+            <span>من نحن</span>
           </div>
         </div>
       </section>
@@ -105,7 +105,7 @@ const AboutPage = () => {
           <p
             className={`text-sm tracking-[0.15em] uppercase text-black/80 dark:text-white/80 ${playfair.className}`}
           >
-            Who Are We
+            من نحن
           </p>
           <span className="h-[1px] w-12 bg-black/30 dark:bg-white/30"></span>
         </div>
@@ -114,10 +114,7 @@ const AboutPage = () => {
         <h2
           className={`max-w-[950px] mx-auto text-3xl md:text-5xl lg:text-[46px] leading-[1.45] text-black dark:text-white ${playfair.className}`}
         >
-          A trusted advisor delivering end-to-end support for startups and
-          established businesses. Specializes in market analysis, strategic
-          planning, and financial modeling to drive innovation and client
-          success.
+          جنة بيور هي شركة قطرية رائدة متخصصة في أنظمة تنقية المياه المركزية وحلول معالجتها، تخدم الأفراد والشركات في جميع أنحاء قطر بتقديم خدمات احترافية في تنظيف الخزانات وصيانة الفلاتر.
         </h2>
 
         {/* Decorative Star Icon */}
@@ -145,7 +142,7 @@ const AboutPage = () => {
             <div className="relative w-full h-[220px] mb-8">
               <Image
                 src="/1st.png"
-                alt="Innovative Solutions"
+                alt="حلول مبتكرة"
                 fill
                 className="object-cover rounded-t-[30px] rounded-b-[30px]"
                 sizes="(max-width: 768px) 100vw, 33vw"
@@ -153,14 +150,13 @@ const AboutPage = () => {
             </div>
 
             <h3
-              className={`text-[28px] lg:text-[32px] leading-tight text-black dark:text-white mb-4 ${playfair.className}`}
+              className={`text-[28px] lg:text-[32px] leading-tight text-black dark:text-white mb-4 font-bold ${playfair.className}`}
             >
-              Innovative Solutions
+              حلول مبتكرة
             </h3>
 
             <p className="text-[16px] leading-[1.8] text-black/60 dark:text-white/60">
-              Access a full suite of services, from business consulting to
-              company formation, all under one roof.
+              احصل على مجموعة كاملة من الخدمات المبتكرة لحلول تنقية المياه، كلها تحت سقف واحد.
             </p>
           </div>
 
@@ -169,7 +165,7 @@ const AboutPage = () => {
             <div className="relative w-full h-[220px] mb-8">
               <Image
                 src="/2nd.png"
-                alt="Personalized Support"
+                alt="دعم مخصص"
                 fill
                 className="object-cover rounded-t-[30px] rounded-b-[30px]"
                 sizes="(max-width: 768px) 100vw, 33vw"
@@ -177,14 +173,13 @@ const AboutPage = () => {
             </div>
 
             <h3
-              className={`text-[28px] lg:text-[32px] leading-tight text-black dark:text-white mb-4 ${playfair.className}`}
+              className={`text-[28px] lg:text-[32px] leading-tight text-black dark:text-white mb-4 font-bold ${playfair.className}`}
             >
-              Personalized Support
+              دعم مخصص
             </h3>
 
             <p className="text-[16px] leading-[1.8] text-black/60 dark:text-white/60">
-              Receive hands-on support from experienced consultants dedicated to
-              your business goals.
+              احصل على دعم عملي ومخصص من خبرائنا لتلبية احتياجاتك المائية بكل احترافية.
             </p>
           </div>
 
@@ -193,7 +188,7 @@ const AboutPage = () => {
             <div className="relative w-full h-[220px] mb-8">
               <Image
                 src="/third.png"
-                alt="Cost Efficiency"
+                alt="فعالية التكلفة"
                 fill
                 className="object-cover rounded-t-[30px] rounded-b-[30px]"
                 sizes="(max-width: 768px) 100vw, 33vw"
@@ -201,14 +196,13 @@ const AboutPage = () => {
             </div>
 
             <h3
-              className={`text-[28px] lg:text-[32px] leading-tight text-black dark:text-white mb-4 ${playfair.className}`}
+              className={`text-[28px] lg:text-[32px] leading-tight text-black dark:text-white mb-4 font-bold ${playfair.className}`}
             >
-              Cost Efficiency
+              فعالية التكلفة
             </h3>
 
             <p className="text-[16px] leading-[1.8] text-black/60 dark:text-white/60">
-              Save valuable time and resources with streamlined processes and
-              expert guidance.
+              وفر وقتك ومواردك مع عملياتنا المبسطة وإرشادات خبرائنا لضمان أفضل قيمة.
             </p>
           </div>
         </div>
@@ -235,22 +229,21 @@ const AboutPage = () => {
         <div className="absolute inset-0 bg-black/50 transition-colors duration-1000 group-hover:bg-black/60"></div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto w-full px-6 grid md:grid-cols-2 items-center gap-10">
-          {/* Left Content */}
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-6 grid md:grid-cols-2 items-center gap-10 text-right">
+          {/* Right Content in RTL (Left Content visually) */}
           <div className="text-white transition-transform duration-700 ease-out group-hover:-translate-y-2">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold leading-[1.1] drop-shadow-md">
-              Problem-Solvers <br />
-              Who Understand <br />
-              Your Needs
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] drop-shadow-md">
+              نقدم دائمًا خدمات <br />
+              تختلف عن <br />
+              الآخرين
             </h1>
           </div>
 
-          {/* Right Content */}
-          <div className="hidden md:flex flex-col items-end text-white text-right transition-transform duration-700 ease-out group-hover:-translate-y-2 delay-100">
+          {/* Left Content in RTL (Right Content visually) */}
+          <div className="hidden md:flex flex-col items-start text-white text-left transition-transform duration-700 ease-out group-hover:-translate-y-2 delay-100">
             <h2 className="text-6xl lg:text-7xl font-light drop-shadow-md">20+</h2>
-            <p className="mt-4 max-w-sm text-lg text-white/80 leading-relaxed drop-shadow-sm">
-              Proven track records, we're trusted by startups for client-centric
-              strategy, and flawless execution.
+            <p className="mt-4 max-w-sm text-lg text-white/80 leading-relaxed drop-shadow-sm text-right">
+              نقدم حلول مياه شاملة تضمن الجودة والأمان وراحة البال لكل عميل.
             </p>
           </div>
         </div>
@@ -260,35 +253,15 @@ const AboutPage = () => {
       <div className="w-full bg-[#f4f7f8] dark:bg-neutral-950 py-24 px-6 flex justify-center">
         <div className="max-w-4xl w-full">
           <h2
-            className={`text-4xl md:text-5xl text-black dark:text-white mb-12 text-center ${playfair.className}`}
+            className={`text-4xl md:text-5xl font-bold text-black dark:text-white mb-12 text-center ${playfair.className}`}
           >
-            Our Core Values
+            قيمنا الأساسية
           </h2>
-          <ul className="space-y-4 text-[17px] text-gray-800 dark:text-gray-300 list-disc pl-6 leading-[1.8] marker:text-black dark:marker:text-white">
-            <li>
-              Showing a definite concern in the business issues and problems that
-              are challenging our clients and working closely with them to solve
-              these problems or any other business dilemma by developing and
-              implementing inspired solutions.
-            </li>
-            <li>
-              Developing long-term valuable business relationships with our
-              clients is significant to our firm than short-term profit.
-            </li>
-            <li>
-              Recruiting merely high caliber individuals to ensure effective
-              quality assurance and helping them to develop all the necessary
-              professional and ethical attributes required to make them all
-              competent business advisors.
-            </li>
-            <li>
-              Make a great effort to meet our integrity and objectivity in all
-              professional and business decision making.
-            </li>
-            <li>
-              Integrity is the cornerstone of our firm. Preserving our honor and
-              the reputable name is predominant to us and is never compromised.
-            </li>
+          <ul className="space-y-4 text-[17px] font-medium text-gray-800 dark:text-gray-300 list-disc pr-6 pl-0 leading-[1.8] marker:text-black dark:marker:text-white">
+            <li>الجودة</li>
+            <li>النزاهة</li>
+            <li>خدمة ما بعد البيع</li>
+            <li>الابتكار</li>
           </ul>
         </div>
       </div>

@@ -309,9 +309,9 @@
   color: rgba(255,255,255,0.8);
 }
 
-/* ── Card 2: CTA (green) ── */
+/* ── Card 2: CTA (blue) ── */
 .support-card--cta {
-  background: #2d5a3d;
+  background: #1e3a8a;
   padding: 36px 32px;
   display: flex;
   flex-direction: column;
@@ -358,7 +358,7 @@
 }
 .support-btn--chat {
   background: #fff;
-  color: #2d5a3d;
+  color: #1e3a8a;
 }
 .support-btn--call {
   background: rgba(255,255,255,0.15);
@@ -725,7 +725,7 @@
 .schedule-modal__success-icon {
   width: 56px;
   height: 56px;
-  color: #4a7c4e;
+  color: #2563eb;
   margin: 0 auto 16px;
 }
 .schedule-modal__success-title {

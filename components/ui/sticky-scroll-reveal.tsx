@@ -41,17 +41,17 @@ export const StickyScroll = ({
   });
 
   const backgroundColors = [
-    "#2d5a3d", // logo green
+    "#1e3a8a", // brand blue
     "#ffffff", // white
   ];
 
   const headingColors = [
-    "#ffffff", // white text on green background
+    "#ffffff", // white text on blue background
     "#000000", // black text on white background
   ];
 
   const descriptionColors = [
-    "rgba(255, 255, 255, 0.8)", // light text on green
+    "rgba(255, 255, 255, 0.8)", // light text on blue
     "rgba(55, 65, 81, 1)", // gray-700 on white
   ];
 

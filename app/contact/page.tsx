@@ -4,36 +4,36 @@ import ContactForm from "@/components/ContactForm";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us – Get In Touch With Betons",
+  title: "اتصل بنا – تواصل مع جنة بيور",
   description:
-    "Contact Betons Business Services for company formation, business setup, and document clearing in Dubai, UAE. Call +971 586695350 or email ops.betons@gmail.com.",
+    "تواصل مع جنة بيور لخدمات تنقية المياه، وصيانة الفلاتر، وتنظيف الخزانات في الدوحة، قطر. اتصل على +974 55899831 أو راسلنا على info@jannahpure.com.",
   robots: {
     index: false,
     follow: true,
   },
   alternates: {
-    canonical: "https://www.betons.ae/contact",
+    canonical: "https://www.jannahpure.com/contact",
   },
   openGraph: {
-    title: "Contact Betons Business Services – Dubai, UAE",
+    title: "تواصل مع جنة بيور – الدوحة، قطر",
     description:
-      "Get in touch with our business consultants in Dubai. Call, email, or submit a form for company formation and business setup enquiries.",
-    url: "https://www.betons.ae/contact",
+      "تواصل مع خبرائنا في قطر. اتصل، راسلنا، أو قدم نموذجاً لاستفسارات حول أنظمة تنقية المياه وخدمات الصيانة.",
+    url: "https://www.jannahpure.com/contact",
   },
 };
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-white dark:bg-background">
+    <main className="min-h-screen bg-white dark:bg-background text-right">
       <section className="w-full pt-40 md:pt-48 pb-20 md:pb-28 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto grid gap-16 lg:grid-cols-[1fr_1.1fr] lg:gap-20 xl:gap-28">
 
-          {/* ── Left: Connect With Us ── */}
+          {/* ── Left: Connect With Us (Right visually in RTL) ── */}
           <div className="flex flex-col justify-center">
             <h1
-              className={`text-3xl md:text-4xl lg:text-5xl leading-[1.15] text-black dark:text-white mb-14 ${playfair.className}`}
+              className={`text-3xl md:text-4xl lg:text-5xl leading-[1.15] text-black dark:text-white mb-14 font-bold ${playfair.className}`}
             >
-              Connect With Us
+              تواصل معنا
             </h1>
 
             <div className="space-y-10">
@@ -47,12 +47,14 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-black dark:text-white mb-1">
-                    Address
+                    العنوان
                   </h3>
                   <p className="text-[15px] leading-relaxed text-black/60 dark:text-white/60">
-                    Business Bay, Dubai
+                    الدوحة الجديدة، مبنى رقم: 71،
                     <br />
-                    United Arab Emirates
+                    الطابق الخامس، مكتب رقم: 10
+                    <br />
+                    الدوحة، قطر
                   </p>
                 </div>
               </div>
@@ -66,13 +68,14 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-black dark:text-white mb-1">
-                    Get In Touch
+                    اتصل بنا
                   </h3>
                   <a
-                    href="tel:+971586695350"
-                    className="text-[15px] text-black/60 dark:text-white/60 hover:text-[#2d8a4e] transition-colors"
+                    href="tel:+97455899831"
+                    className="text-[15px] text-black/60 dark:text-white/60 hover:text-[#2d8a4e] transition-colors dir-ltr inline-block"
+                    dir="ltr"
                   >
-                    +971 586695350
+                    +974 55899831
                   </a>
                 </div>
               </div>
@@ -87,13 +90,13 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-black dark:text-white mb-1">
-                    Email Us
+                    راسلنا
                   </h3>
                   <a
-                    href="mailto:ops.betons@gmail.com"
+                    href="mailto:info@jannahpure.com"
                     className="text-[15px] text-black/60 dark:text-white/60 hover:text-[#2d8a4e] transition-colors"
                   >
-                    ops.betons@gmail.com
+                    info@jannahpure.com
                   </a>
                 </div>
               </div>
@@ -144,7 +147,7 @@ export default function ContactPage() {
                 </a>
                 {/* WhatsApp */}
                 <a
-                  href="https://wa.me/971586695350"
+                  href="https://wa.me/97455899831"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center w-11 h-11 rounded-full border border-black/15 dark:border-white/15 text-black/50 dark:text-white/50 hover:border-[#25d366] hover:text-[#25d366] transition-all duration-300"
@@ -158,7 +161,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* ── Right: Contact Form Card ── */}
+          {/* ── Right: Contact Form Card (Left visually in RTL) ── */}
           <ContactForm />
 
         </div>

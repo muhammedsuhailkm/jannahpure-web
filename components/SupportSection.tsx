@@ -15,25 +15,25 @@ import {
 } from "lucide-react";
 import { playfair } from "@/lib/fonts";
 
-const WHATSAPP_NUMBER = "971586695350";
-const PHONE_NUMBER = "+971586695350";
+const WHATSAPP_NUMBER = "97455899831";
+const PHONE_NUMBER = "+97455899831";
 
 /* ── Helper: generate week dates starting from today ── */
 function getWeekDates() {
-  const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const days = ["الأحد", "الاثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "السبت"];
   const months = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
+    "يناير",
+    "فبراير",
+    "مارس",
+    "أبريل",
+    "مايو",
+    "يونيو",
+    "يوليو",
+    "أغسطس",
+    "سبتمبر",
+    "أكتوبر",
+    "نوفمبر",
+    "ديسمبر",
   ];
   const dates: { day: string; date: number; month: string; full: Date }[] = [];
   const today = new Date();
@@ -156,14 +156,12 @@ const SupportSection = () => {
           {/* ── Card 1: Get Support ── */}
           <div className="support-card support-card--cta">
             <h3 className={`support-card__heading ${playfair.className}`}>
-              Hurry? Get Support
+              مستعجل؟ احصل على الدعم
               <br />
-              Right Away!
+              فوراً!
             </h3>
             <p className="support-card__text">
-              Short on time? Connect with our team directly via WhatsApp or call
-              for immediate support. We&apos;re here to answer your questions
-              and guide you through your business setup efficiently.
+              ليس لديك وقت؟ تواصل مع فريقنا مباشرة عبر الواتساب أو اتصل للحصول على دعم فوري. نحن هنا للإجابة على أسئلتك وإرشادك لتلبية احتياجاتك من أنظمة تنقية المياه بكفاءة.
             </p>
             <div className="support-card__buttons">
               <a
@@ -173,14 +171,14 @@ const SupportSection = () => {
                 className="support-btn support-btn--chat"
               >
                 <MessageCircle className="support-btn__icon" />
-                Chat Now
+                تحدث الآن
               </a>
               <a
                 href={`tel:${PHONE_NUMBER}`}
                 className="support-btn support-btn--call"
               >
                 <Phone className="support-btn__icon" />
-                Call Now
+                اتصل الآن
               </a>
             </div>
           </div>
@@ -188,9 +186,7 @@ const SupportSection = () => {
           {/* ── Card 3: Schedule Meeting ── */}
           <div className="support-card support-card--schedule">
             <p className="support-card__schedule-text">
-              Plan your meeting with ease. Select a date that suits you, and
-              we&apos;ll make sure an expert is ready to assist you with your
-              business setup in the UAE.
+              خطط لاجتماعك بكل سهولة. اختر التاريخ الذي يناسبك، وسنتأكد من جاهزية خبير لمساعدتك في احتياجاتك من أنظمة تنقية المياه في قطر.
             </p>
 
             {/* Date pills */}
@@ -218,7 +214,7 @@ const SupportSection = () => {
                 <ChevronRight className="support-swipe__icon" />
               </div>
               <span className="support-swipe__label">
-                Swipe to Schedule Meeting
+                اسحب لتحديد موعد اجتماع
               </span>
             </div>
           </div>
@@ -239,14 +235,14 @@ const SupportSection = () => {
           >
             {submitted ? (
               <div className="text-center py-10">
-                <CheckCircle2 className="w-14 h-14 text-[#4a7c4e] mx-auto mb-4" />
+                <CheckCircle2 className="w-14 h-14 text-[#2563eb] mx-auto mb-4" />
                 <h3
                   className={`text-xl font-bold text-[#1a1a1a] mb-2 ${playfair.className}`}
                 >
                   Meeting Scheduled!
                 </h3>
                 <p className="text-[#888] text-sm">
-                  Your request has been sent via WhatsApp.
+                  تم إرسال طلبك عبر الواتساب.
                 </p>
               </div>
             ) : (
@@ -260,41 +256,41 @@ const SupportSection = () => {
                 </button>
 
                 {/* Header icon */}
-                <div className="w-14 h-14 rounded-[14px] bg-[#2d5a3d] text-white flex items-center justify-center mx-auto mb-5">
+                <div className="w-14 h-14 rounded-[14px] bg-[#1e3a8a] text-white flex items-center justify-center mx-auto mb-5">
                   <CalendarDays size={28} />
                 </div>
 
                 <h3
                   className={`text-2xl font-bold text-[#1a1a1a] mb-1 ${playfair.className}`}
                 >
-                  Schedule Meeting
+                  تحديد موعد اجتماع
                 </h3>
                 <p className="text-sm text-[#999] mb-7">
-                  Let&apos;s plan your next discussion
+                  دعنا نخطط لنقاشك القادم
                 </p>
 
                 {/* Selected Date Card */}
-                <div className="flex items-center justify-between px-5 py-4 border-[1.5px] border-[#c8ddd0] rounded-xl bg-[#f2f8f4] mb-6 text-left">
+                <div className="flex items-center justify-between px-5 py-4 border-[1.5px] border-[#bfdbfe] rounded-xl bg-[#eff6ff] mb-6 text-left">
                   <div className="flex items-center gap-3.5">
                     <CalendarDays
                       size={20}
-                      className="text-[#2d5a3d] shrink-0"
+                      className="text-[#1e3a8a] shrink-0"
                     />
                     <div>
                       <span className="block text-xs text-[#999] mb-0.5">
-                        Selected Date
+                        التاريخ المحدد
                       </span>
                       <span className="block text-base font-bold text-[#1a1a1a]">
-                        {selectedDateObj.day}, {selectedDateObj.date}{" "}
+                        {selectedDateObj.day}، {selectedDateObj.date}{" "}
                         {selectedDateObj.month}
                       </span>
                     </div>
                   </div>
                   <button
-                    className="border-[1.5px] border-[#d4d4d4] rounded-lg px-4 py-1.5 text-[13px] font-semibold text-[#1a1a1a] hover:border-[#2d5a3d] hover:text-[#2d5a3d] transition-all bg-transparent"
+                    className="border-[1.5px] border-[#d4d4d4] rounded-lg px-4 py-1.5 text-[13px] font-semibold text-[#1a1a1a] hover:border-[#1e3a8a] hover:text-[#1e3a8a] transition-all bg-transparent"
                     onClick={() => setShowDatePicker(!showDatePicker)}
                   >
-                    Change
+                    تغيير
                   </button>
                 </div>
 
@@ -309,7 +305,7 @@ const SupportSection = () => {
                         key={i}
                         className={`flex-1 flex flex-col items-center py-2.5 px-2 rounded-xl border-2 cursor-pointer transition-all ${
                           i === selectedDate
-                            ? "bg-[#2d5a3d] border-[#2d5a3d]"
+                            ? "bg-[#1e3a8a] border-[#1e3a8a]"
                             : "bg-[#f5f5f5] border-transparent hover:border-[#c9a85c]"
                         }`}
                         onClick={() => {
@@ -335,11 +331,11 @@ const SupportSection = () => {
                 {/* Form */}
                 <div className="flex flex-col gap-3.5 mb-6 text-left">
                   {/* Name */}
-                  <div className="flex items-center gap-3 border-[1.5px] border-[#e8e8e8] rounded-xl px-4 py-3.5 focus-within:border-[#2d5a3d] transition-colors bg-white">
+                  <div className="flex items-center gap-3 border-[1.5px] border-[#e8e8e8] rounded-xl px-4 py-3.5 focus-within:border-[#1e3a8a] transition-colors bg-white">
                     <User size={18} className="text-[#bbb] shrink-0" />
                     <input
                       type="text"
-                      placeholder="Your Name"
+                      placeholder="اسمك"
                       value={formData.name}
                       onChange={(e) =>
                         setFormData({ ...formData, name: e.target.value })
@@ -350,11 +346,11 @@ const SupportSection = () => {
 
                   {/* Phone + Email row */}
                   <div className="grid grid-cols-2 gap-3.5">
-                    <div className="flex items-center gap-3 border-[1.5px] border-[#e8e8e8] rounded-xl px-4 py-3.5 focus-within:border-[#2d5a3d] transition-colors bg-white">
+                    <div className="flex items-center gap-3 border-[1.5px] border-[#e8e8e8] rounded-xl px-4 py-3.5 focus-within:border-[#1e3a8a] transition-colors bg-white">
                       <Phone size={18} className="text-[#bbb] shrink-0" />
                       <input
                         type="tel"
-                        placeholder="Phone"
+                        placeholder="رقم الهاتف"
                         value={formData.phone}
                         onChange={(e) =>
                           setFormData({ ...formData, phone: e.target.value })
@@ -362,11 +358,11 @@ const SupportSection = () => {
                         className="border-none outline-none text-sm text-[#1a1a1a] w-full bg-transparent placeholder:text-[#bbb]"
                       />
                     </div>
-                    <div className="flex items-center gap-3 border-[1.5px] border-[#e8e8e8] rounded-xl px-4 py-3.5 focus-within:border-[#2d5a3d] transition-colors bg-white">
+                    <div className="flex items-center gap-3 border-[1.5px] border-[#e8e8e8] rounded-xl px-4 py-3.5 focus-within:border-[#1e3a8a] transition-colors bg-white">
                       <Mail size={18} className="text-[#bbb] shrink-0" />
                       <input
                         type="email"
-                        placeholder="Email"
+                        placeholder="البريد الإلكتروني"
                         value={formData.email}
                         onChange={(e) =>
                           setFormData({ ...formData, email: e.target.value })
@@ -377,13 +373,13 @@ const SupportSection = () => {
                   </div>
 
                   {/* Message */}
-                  <div className="flex items-start gap-3 border-[1.5px] border-[#e8e8e8] rounded-xl px-4 py-3.5 focus-within:border-[#2d5a3d] transition-colors bg-white">
+                  <div className="flex items-start gap-3 border-[1.5px] border-[#e8e8e8] rounded-xl px-4 py-3.5 focus-within:border-[#1e3a8a] transition-colors bg-white">
                     <MessageSquare
                       size={18}
                       className="text-[#bbb] shrink-0 mt-0.5"
                     />
                     <textarea
-                      placeholder="Your message or agenda..."
+                      placeholder="رسالتك أو أجندة الاجتماع..."
                       value={formData.message}
                       onChange={(e) =>
                         setFormData({ ...formData, message: e.target.value })
@@ -396,12 +392,12 @@ const SupportSection = () => {
 
                 {/* Submit */}
                 <button
-                  className="w-full py-4 rounded-[14px] bg-[#2d5a3d] text-white text-base font-semibold flex items-center justify-center gap-2.5 cursor-pointer hover:opacity-90 hover:-translate-y-0.5 transition-all disabled:opacity-50 disabled:cursor-not-allowed border-none"
+                  className="w-full py-4 rounded-[14px] bg-[#1e3a8a] text-white text-base font-semibold flex items-center justify-center gap-2.5 cursor-pointer hover:opacity-90 hover:-translate-y-0.5 transition-all disabled:opacity-50 disabled:cursor-not-allowed border-none"
                   onClick={handleSendWhatsApp}
                   disabled={!formData.name}
                 >
                   <Send size={18} />
-                  Send via WhatsApp
+                  إرسال عبر الواتساب
                 </button>
               </>
             )}

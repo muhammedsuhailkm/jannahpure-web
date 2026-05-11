@@ -17,10 +17,10 @@ import {
 } from "lucide-react";
 
 const serviceLinks = [
-  { label: "Company Formation", href: "/services/company-formation" },
-  { label: "Business Setup", href: "/services/business-setup" },
-  { label: "Document Clearing", href: "/services/document-clearing" },
-  { label: "Free Zone Services", href: "/services/free-zone-services" },
+  { label: "فلاتر المطابخ", href: "/services/kitchen-filter" },
+  { label: "فلتر الغسيل العكسي المركزي", href: "/services/central-backwash-filter" },
+  { label: "فلاتر متعددة المراحل", href: "/services/multi-stage-filters" },
+  { label: "فلتر جامبو", href: "/services/jumbo-filter" },
 ];
 
 const Navigation = () => {
@@ -56,63 +56,63 @@ const Navigation = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      {/* Green Top Bar */}
+      {/* Blue Top Bar */}
       <div
-        className={`bg-[#4a7c4e] text-white transition-all duration-300 overflow-hidden ${
+        className={`bg-[#2563eb] text-white transition-all duration-300 overflow-hidden ${
           isScrolled ? "h-0 opacity-0" : "h-10 opacity-100"
         }`}
       >
         <div className="container mx-auto px-4 sm:px-6 h-full flex items-center justify-between gap-2 sm:gap-4">
-          {/* Left: Contact + Services */}
+          {/* Right: Contact + Services (Arabic aligns right normally, but we keep flex order) */}
           <div className="flex items-center gap-3 sm:gap-5 text-xs font-medium tracking-wide min-w-0">
             {/* Phone */}
             <a
-              href="tel:+971586695350"
-              className="flex items-center gap-1.5 hover:text-green-100 transition-colors shrink-0"
+              href="tel:+97455899831"
+              className="flex items-center gap-1.5 hover:text-blue-100 transition-colors shrink-0 dir-ltr"
             >
               <Phone size={13} className="shrink-0" />
-              <span className="whitespace-nowrap">+971 586695350</span>
+              <span className="whitespace-nowrap" dir="ltr">+974 55899831</span>
             </a>
 
             {/* Divider */}
-            <span className="text-green-400 hidden sm:block">|</span>
+            <span className="text-blue-300 hidden sm:block">|</span>
 
             {/* Email - hidden on small mobile */}
             <a
-              href="mailto:ops.betons@gmail.com"
-              className="hidden sm:flex items-center gap-1.5 hover:text-green-100 transition-colors min-w-0"
+              href="mailto:info@jannahpure.com"
+              className="flex items-center gap-1.5 hover:text-blue-100 transition-colors max-w-[150px] sm:max-w-none"
             >
               <Mail size={13} className="shrink-0" />
-              <span className="truncate">ops.betons@gmail.com</span>
+              <span className="truncate">info@jannahpure.com</span>
             </a>
 
             {/* Divider */}
-            <span className="text-green-400 hidden lg:block">|</span>
+            <span className="text-blue-300 hidden lg:block">|</span>
 
-            {/* Company Formation */}
+            {/* Kitchen Filter */}
             <span className="hidden lg:flex items-center gap-1.5">
               <Building2 size={13} />
-              <span>Company Formation</span>
+              <span>فلاتر المطابخ</span>
             </span>
 
             {/* Divider */}
-            <span className="text-green-400 hidden lg:block">|</span>
+            <span className="text-blue-300 hidden lg:block">|</span>
 
-            {/* Business Setup */}
+            {/* Central Backwash Filter */}
             <span className="hidden lg:flex items-center gap-1.5">
               <Briefcase size={13} />
-              <span>Business Setup</span>
+              <span>فلتر الغسيل العكسي المركزي</span>
             </span>
           </div>
 
-          {/* Right: Social Icons */}
+          {/* Left: Social Icons */}
           <div className="flex items-center gap-2 sm:gap-3 shrink-0">
             <a
               href="#"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
-              className="hover:text-green-600 transition-colors"
+              className="hover:text-blue-600 transition-colors"
             >
               <Facebook size={15} />
             </a>
@@ -121,7 +121,7 @@ const Navigation = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
-              className="hover:text-green-600 transition-colors"
+              className="hover:text-blue-600 transition-colors"
             >
               <Instagram size={15} />
             </a>
@@ -130,7 +130,7 @@ const Navigation = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="hover:text-green-600 transition-colors"
+              className="hover:text-blue-600 transition-colors"
             >
               <Linkedin size={15} />
             </a>
@@ -139,12 +139,12 @@ const Navigation = () => {
       </div>
 
       {/* Main Navigation */}
-      <nav className="bg-background/80 backdrop-blur-md border-b border-border shadow-sm">
+      <nav className="bg-white dark:bg-background border-b border-border shadow-sm">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" onClick={handleClick} className="flex-shrink-0">
             <Image
-              src="/logo-org.png"
-              alt="Logo"
+              src="/logo.jpeg"
+              alt="شعار جنة بيور"
               width={220}
               height={64}
               className="h-14 md:h-16 w-auto object-contain dark:bg-white/90 dark:p-1 dark:rounded-md"
@@ -153,12 +153,12 @@ const Navigation = () => {
             />
           </Link>
 
-          {/* Right Side Group */}
-          <div className="hidden md:flex items-center space-x-12">
+          {/* Left Side Group (in RTL this visually aligns to left side of screen) */}
+          <div className="hidden md:flex items-center space-x-12 space-x-reverse">
             {/* Desktop Menu */}
-            <div className="flex items-center space-x-12">
+            <div className="flex items-center space-x-12 space-x-reverse">
               <Link href="/about" onClick={handleClick}>
-                ABOUT
+                من نحن
               </Link>
 
               {/* Services with Dropdown */}
@@ -172,7 +172,7 @@ const Navigation = () => {
                   onClick={handleClick}
                   className="flex items-center gap-1 group"
                 >
-                  SERVICES
+                  خدماتنا
                   <ChevronDown
                     size={14}
                     className={`transition-transform duration-300 ${
@@ -183,7 +183,7 @@ const Navigation = () => {
 
                 {/* Dropdown */}
                 <div
-                  className={`absolute top-full left-1/2 -translate-x-1/2 pt-3 transition-all duration-300 ${
+                  className={`absolute top-full right-1/2 translate-x-1/2 pt-3 transition-all duration-300 ${
                     isServicesOpen
                       ? "opacity-100 visible translate-y-0"
                       : "opacity-0 invisible -translate-y-2"
@@ -191,7 +191,7 @@ const Navigation = () => {
                 >
                   <div className="bg-background/95 backdrop-blur-xl border border-border rounded-xl shadow-2xl overflow-hidden min-w-[240px]">
                     {/* Decorative top accent */}
-                    <div className="h-0.5 bg-gradient-to-r from-[#4a7c4e] via-[#5a9e5f] to-[#4a7c4e]" />
+                    <div className="h-0.5 bg-gradient-to-l from-[#2563eb] via-[#60a5fa] to-[#2563eb]" />
 
                     <div className="py-2">
                       {serviceLinks.map((item, index) => (
@@ -199,9 +199,9 @@ const Navigation = () => {
                           key={item.href}
                           href={item.href}
                           onClick={handleClick}
-                          className="flex items-center gap-3 px-5 py-3 text-sm text-foreground/80 hover:text-foreground hover:bg-[#4a7c4e]/8 transition-all duration-200 group/item"
+                          className="flex items-center gap-3 px-5 py-3 text-sm text-foreground/80 hover:text-foreground hover:bg-[#2563eb]/8 transition-all duration-200 group/item"
                         >
-                          <span className="text-[10px] font-semibold text-[#4a7c4e]/60 group-hover/item:text-[#4a7c4e] transition-colors">
+                          <span className="text-[10px] font-semibold text-[#2563eb]/60 group-hover/item:text-[#2563eb] transition-colors">
                             0{index + 1}
                           </span>
                           <span className="font-medium tracking-wide">
@@ -215,15 +215,15 @@ const Navigation = () => {
               </div>
 
               <Link href="/gallery" onClick={handleClick}>
-                GALLERY
+                معرض الصور
               </Link>
               <Link href="/contact" onClick={handleClick}>
-                CONTACT US
+                اتصل بنا
               </Link>
             </div>
 
             {/* Theme Toggle */}
-            <div className="flex items-center">
+            <div className="flex items-center mr-6">
               <ThemeToggle />
             </div>
           </div>
@@ -244,7 +244,7 @@ const Navigation = () => {
           <div className="md:hidden bg-background border-b border-border">
             <div className="container mx-auto px-6 py-6 space-y-4 flex flex-col">
               <Link href="/about" onClick={handleClick}>
-                ABOUT
+                من نحن
               </Link>
 
               {/* Mobile Services Accordion */}
@@ -253,9 +253,9 @@ const Navigation = () => {
                   onClick={() =>
                     setIsMobileServicesOpen(!isMobileServicesOpen)
                   }
-                  className="flex items-center gap-1 w-full text-left"
+                  className="flex items-center justify-between w-full text-right"
                 >
-                  SERVICES
+                  <span>خدماتنا</span>
                   <ChevronDown
                     size={14}
                     className={`transition-transform duration-300 ${
@@ -270,7 +270,7 @@ const Navigation = () => {
                       : "max-h-0 opacity-0"
                   }`}
                 >
-                  <div className="pl-4 border-l-2 border-[#4a7c4e]/30 space-y-3">
+                  <div className="pr-4 border-r-2 border-[#2563eb]/30 space-y-3">
                     {serviceLinks.map((item) => (
                       <Link
                         key={item.href}
@@ -286,10 +286,10 @@ const Navigation = () => {
               </div>
 
               <Link href="/gallery" onClick={handleClick}>
-                GALLERY
+                معرض الصور
               </Link>
               <Link href="/contact" onClick={handleClick}>
-                CONTACT US
+                اتصل بنا
               </Link>
 
               {/* Theme Toggle */}

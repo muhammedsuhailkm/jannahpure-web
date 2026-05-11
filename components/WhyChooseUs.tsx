@@ -5,9 +5,9 @@ import { playfair } from "@/lib/fonts";
 
 const features = [
   {
-    title: ["Consulting", "Expertise"],
+    title: ["أوسع", "تشكيلة"],
     description:
-      "Our consulting expertise entails in depth industry knowledge, and tailored solutions, essential for guiding businesses toward sustainable growth.",
+      "أوسع تشكيلة من فلاتر المياه والعلامات التجارية العالمية في قطر، مصممة لتلبية الاحتياجات السكنية والتجارية.",
     icon: (
       <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
         <path
@@ -20,9 +20,9 @@ const features = [
     ),
   },
   {
-    title: ["Rapid Value", "Creation"],
+    title: ["فريق", "محترف"],
     description:
-      "Our rapid value creation involves swiftly generating tangible benefits and sustainable growth through innovative strategies and efficient execution.",
+      "فريق فني مدرب تدريباً عالياً ومحترف مكرس لتقديم أعلى مستويات الصيانة والتركيب.",
     icon: (
       <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
         <circle cx="28" cy="28" r="25" stroke="rgba(255,255,255,0.35)" strokeWidth="1.5" />
@@ -34,9 +34,9 @@ const features = [
     ),
   },
   {
-    title: ["Industry", "Experience"],
+    title: ["خدمة ما بعد", "البيع"],
     description:
-      "Our experience is the cornerstone of our consulting excellence, giving our clients an advantage through effective, and innovative solutions.",
+      "دعم شامل بعد البيع وضمان على جميع المنتجات لضمان أداء طويل الأمد وراحة البال.",
     icon: (
       <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
         {[0, 1, 2, 3].map((r) =>
@@ -57,9 +57,9 @@ const features = [
     ),
   },
   {
-    title: ["Local", "Network"],
+    title: ["خدمة", "سريعة"],
     description:
-      "Our deep understanding of UAE's business environment and strong local insights help you navigate regulations, seize opportunities, and achieve success.",
+      "خدمة سريعة وسريعة الاستجابة تغطي جميع المناطق في قطر لضمان أفضل الحلول المائية لك دائماً.",
     icon: (
       <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
         {[0, 45, 90, 135, 180, 225, 270, 315].map((angle) => {
@@ -76,9 +76,9 @@ const features = [
     ),
   },
   {
-    title: ["Strategic", "Planning"],
+    title: ["شركاء", "عالميون"],
     description:
-      "We craft comprehensive strategic plans that align with your business vision, ensuring every step forward is purposeful, measurable, and result-driven.",
+      "نتعاون مع علامات تجارية دولية موثوقة ومشهورة بجودتها وابتكارها في أنظمة التنقية.",
     icon: (
       <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
         <circle cx="28" cy="28" r="25" stroke="rgba(255,255,255,0.35)" strokeWidth="1.5" />
@@ -88,9 +88,9 @@ const features = [
     ),
   },
   {
-    title: ["Compliance", "& Legal"],
+    title: ["حلول", "مخصصة"],
     description:
-      "Our compliance experts ensure your business meets all UAE regulatory requirements, providing peace of mind and full legal protection at every stage.",
+      "حلول مياه كاملة مخصصة لكل حاجة، من فلاتر المطابخ إلى أنظمة جامبو عالية السعة.",
     icon: (
       <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
         <rect x="8" y="4" width="40" height="48" rx="4" stroke="rgba(255,255,255,0.35)" strokeWidth="1.5" />
@@ -145,25 +145,26 @@ const WhyChooseUs = () => {
     if (!trackRef.current) return 0;
     const containerWidth = trackRef.current.offsetWidth;
     const cardWidth = (containerWidth - GAP * (visibleCount - 1)) / visibleCount;
-    return -(activeIndex * (cardWidth + GAP));
+    // In RTL, moving to the next item means translating to the RIGHT (positive X)
+    return (activeIndex * (cardWidth + GAP));
   };
 
   return (
     <section className="bg-[#141414] py-16 px-6 overflow-x-hidden">
       <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
-        {/* Left side */}
+        {/* Left side (In RTL, this is on the right) */}
         <div className="flex-shrink-0 lg:w-[280px]">
-          <span className="inline-block bg-[#2d5a3d] text-white text-sm font-semibold px-5 py-2 rounded-full mb-6">
-            Why choose us
+          <span className="inline-block bg-[#1e3a8a] text-white text-sm font-semibold px-5 py-2 rounded-full mb-6">
+            لماذا تختارنا
           </span>
           <h2
             className={`text-4xl md:text-5xl font-bold text-white leading-tight mb-8 ${playfair.className}`}
           >
-            Your one stop
+            شريكك الموثوق
             <br />
-            solution to
+            في حلول
             <br />
-            UAE business
+            المياه
           </h2>
           {/* Dots */}
           <div className="flex gap-2.5 mt-4">
@@ -181,7 +182,7 @@ const WhyChooseUs = () => {
           </div>
         </div>
 
-        {/* Right side: Sliding carousel */}
+        {/* Right side: Sliding carousel (In RTL, this is on the left) */}
         <div className="w-full lg:flex-1 min-w-0 overflow-hidden" ref={trackRef}>
           <div
             className="flex transition-transform duration-700 ease-in-out"

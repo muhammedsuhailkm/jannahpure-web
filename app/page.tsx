@@ -9,26 +9,27 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    absolute:
-      "Betons Business Services | Company Formation & Business Setup in Dubai, UAE",
+    default:
+      "جنة بيور | أنظمة تنقية المياه المركزية الرائدة في قطر",
+    template: "%s | جنة بيور",
   },
   description:
-    "Betons Business Services offers expert company formation, business setup, document clearing, and free zone services in Dubai, UAE. Your trusted business partner.",
+    "تقدم جنة بيور أنظمة تنقية مياه مركزية خبيرة، وخدمات صيانة، وحلول تنظيف الخزانات للقطاعات السكنية والتجارية في قطر.",
   alternates: {
-    canonical: "https://www.betons.ae",
+    canonical: "https://www.jannahpure.com",
   },
   openGraph: {
     title:
-      "Betons Business Services | Company Formation & Business Setup in Dubai",
+      "جنة بيور | أنظمة تنقية المياه المركزية في قطر",
     description:
-      "Expert business setup, company formation, document clearing & free zone services in Dubai, UAE. Start your business journey with Betons.",
-    url: "https://www.betons.ae",
+      "المزود الرائد في قطر لأنظمة تنقية المياه المركزية والصيانة وتنظيف الخزانات للقطاعات السكنية والتجارية.",
+    url: "https://www.jannahpure.com",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Betons Business Services – Company Formation & Business Setup in Dubai, UAE",
+        alt: "جنة بيور – أنظمة تنقية المياه المركزية في قطر",
       },
     ],
   },
@@ -37,55 +38,56 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "Betons Business Services",
-  url: "https://www.betons.ae",
-  logo: "https://www.betons.ae/logo-org.png",
+  name: "جنة بيور",
+  url: "https://www.jannahpure.com",
+  logo: "https://www.jannahpure.com/logo.jpeg",
   description:
-    "Betons Business Services is a Dubai-based consultancy delivering professional solutions for company formation, business setup, document clearing, and free zone services across the UAE.",
+    "المزود الرائد في قطر لأنظمة تنقية المياه المركزية والصيانة وتنظيف الخزانات للقطاعات السكنية والتجارية.",
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Business Bay, Dubai",
-    addressCountry: "AE",
+    streetAddress: "الدوحة الجديدة، مبنى رقم: 71، الطابق الخامس، مكتب رقم: 10",
+    addressLocality: "الدوحة",
+    addressCountry: "QA",
   },
-  telephone: "+971586695350",
-  email: "ops.betons@gmail.com",
+  telephone: "+97455899831",
+  email: "info@jannahpure.com",
   sameAs: [],
   priceRange: "$$",
   openingHours: "Mo-Sa 09:00-18:00",
   areaServed: {
     "@type": "Country",
-    name: "United Arab Emirates",
+    name: "قطر",
   },
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "Business Services",
+    name: "أنظمة تنقية المياه المركزية",
     itemListElement: [
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Company Formation",
+          name: "فلاتر المطابخ",
         },
       },
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Business Setup",
+          name: "فلتر الغسيل العكسي المركزي",
         },
       },
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Document Clearing",
+          name: "فلاتر متعددة المراحل",
         },
       },
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Free Zone Services",
+          name: "فلتر جامبو",
         },
       },
     ],

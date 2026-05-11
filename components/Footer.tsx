@@ -11,13 +11,13 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="relative text-white pt-10 pb-5 overflow-hidden">
+    <footer className="relative text-white pt-10 pb-5 overflow-hidden text-right">
       {/* CSS gradient background */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(135deg, #1f3f2b 0%, #2d5a3d 30%, #3a734f 60%, #2d5a3d 100%)",
+            "linear-gradient(135deg, #172554 0%, #1e3a8a 30%, #2563eb 60%, #1e3a8a 100%)",
         }}
       />
       {/* Subtle radial glow accents */}
@@ -25,7 +25,7 @@ const Footer = () => {
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse at 15% 30%, rgba(45, 90, 61, 0.22) 0%, transparent 52%), radial-gradient(ellipse at 85% 70%, rgba(58, 115, 79, 0.16) 0%, transparent 45%), radial-gradient(ellipse at 50% 0%, rgba(102, 150, 116, 0.12) 0%, transparent 40%)",
+            "radial-gradient(ellipse at 15% 30%, rgba(30, 58, 138, 0.22) 0%, transparent 52%), radial-gradient(ellipse at 85% 70%, rgba(37, 99, 235, 0.16) 0%, transparent 45%), radial-gradient(ellipse at 50% 0%, rgba(96, 165, 250, 0.12) 0%, transparent 40%)",
         }}
       />
       {/* Grid pattern overlay */}
@@ -51,8 +51,8 @@ const Footer = () => {
             <Link className="mb-4 inline-flex items-center gap-2" href="/">
               <span className="inline-flex rounded-xl bg-white px-3 py-2 shadow-[0_8px_22px_-12px_rgba(255,255,255,0.5)]">
                 <Image
-                  src="/logo-org.png"
-                  alt="Betons Logo"
+                  src="/logo.jpeg"
+                  alt="شعار جنة بيور"
                   width={190}
                   height={48}
                   className="h-12 w-auto"
@@ -60,11 +60,8 @@ const Footer = () => {
                 />
               </span>
             </Link>
-            <p className="max-w-md text-sm leading-relaxed text-white">
-              Betons Business Services is your trusted partner for company
-              formation, business setup, and document clearing across the UAE.
-              We deliver reliable, compliant, and efficient solutions tailored
-              to your goals.
+            <p className="max-w-md text-sm leading-relaxed text-white mt-2">
+              تعتبر جنة بيور شريكك الموثوق لتنقية المياه، تنظيف الخزانات، وصيانة الفلاتر في جميع أنحاء قطر. نحن نقدم حلولاً موثوقة ومتكاملة تعزز من جودة حياة عملائنا.
             </p>
             <div className="mt-4 flex gap-3">
               <a
@@ -99,30 +96,31 @@ const Footer = () => {
 
           {/* Column 2: Contact */}
           <div>
-            <h4 className="mb-3 text-lg font-semibold text-white">Contact</h4>
+            <h4 className="mb-3 text-lg font-semibold text-white">اتصل بنا</h4>
             <ul className="space-y-3 text-white">
               <li className="flex items-center gap-3">
-                <Mail className="h-5 w-5 text-[#4a7c4e]" />
+                <Mail className="h-5 w-5 text-[#60a5fa] shrink-0" />
                 <a
-                  href="mailto:ops.betons@gmail.com"
+                  href="mailto:info@jannahpure.com"
                   className="hover:text-white transition-colors"
                 >
-                  ops.betons@gmail.com
+                  info@jannahpure.com
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="h-5 w-5 text-[#4a7c4e]" />
+                <Phone className="h-5 w-5 text-[#60a5fa] shrink-0" />
                 <a
-                  href="tel:+971586695350"
-                  className="hover:text-white transition-colors"
+                  href="tel:+97455899831"
+                  className="hover:text-white transition-colors dir-ltr"
+                  dir="ltr"
                 >
-                  +971 586695350
+                  +974 55899831
                 </a>
               </li>
             </ul>
 
             <h4 className="mt-6 mb-3 text-lg font-semibold text-white">
-              Quick Links
+              روابط سريعة
             </h4>
             <ul className="space-y-2 text-white text-sm">
               <li>
@@ -130,7 +128,7 @@ const Footer = () => {
                   href="/about"
                   className="hover:text-white transition-colors"
                 >
-                  About Us
+                  من نحن
                 </Link>
               </li>
               <li>
@@ -138,7 +136,7 @@ const Footer = () => {
                   href="/services"
                   className="hover:text-white transition-colors"
                 >
-                  Services
+                  الخدمات
                 </Link>
               </li>
               <li>
@@ -146,7 +144,7 @@ const Footer = () => {
                   href="/gallery"
                   className="hover:text-white transition-colors"
                 >
-                  Gallery
+                  معرض الصور
                 </Link>
               </li>
               <li>
@@ -154,7 +152,7 @@ const Footer = () => {
                   href="/contact"
                   className="hover:text-white transition-colors"
                 >
-                  Contact Us
+                  اتصل بنا
                 </Link>
               </li>
             </ul>
@@ -162,35 +160,38 @@ const Footer = () => {
 
           {/* Column 3: Address */}
           <div>
-            <h4 className="mb-3 text-lg font-semibold text-white">Address</h4>
+            <h4 className="mb-3 text-lg font-semibold text-white">العنوان</h4>
             <div className="flex items-start gap-3 text-white">
-              <MapPin className="mt-1 h-5 w-5 shrink-0 text-[#4a7c4e]" />
+              <MapPin className="mt-1 h-5 w-5 shrink-0 text-[#60a5fa]" />
               <span className="leading-relaxed">
-                Business Bay, Dubai,
+                الدوحة الجديدة، مبنى رقم: 71،
                 <br />
-                United Arab Emirates
+                الطابق الخامس، مكتب رقم: 10
+                <br />
+                الدوحة، قطر
               </span>
             </div>
 
             <h4 className="mt-6 mb-3 text-lg font-semibold text-white">
-              Services
+              خدماتنا
             </h4>
             <ul className="space-y-2 text-white text-sm">
-              <li>Company Formation</li>
-              <li>Business Setup</li>
-              <li>Document Clearing</li>
-              <li>Free Zone Services</li>
+              <li>فلاتر المطابخ</li>
+              <li>فلتر الغسيل العكسي المركزي</li>
+              <li>فلاتر متعددة المراحل</li>
+              <li>فلتر جامبو</li>
             </ul>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col items-center justify-between gap-2 border-t border-white/10 pt-4 text-center md:flex-row md:text-left">
+        <div className="flex flex-col items-center justify-between gap-2 border-t border-white/10 pt-4 text-center md:flex-row md:text-right">
           <p className="text-sm text-white">
-            © {new Date().getFullYear()} Betons Business Services. All rights
-            reserved.
+            © {new Date().getFullYear()} جنة بيور. جميع الحقوق محفوظة.
           </p>
-          <p className="text-sm text-white">Dubai, United Arab Emirates</p>
+          <p className="text-sm text-white">
+            الدوحة الجديدة، مبنى رقم: 71، الطابق الخامس، مكتب رقم: 10، الدوحة، قطر
+          </p>
         </div>
       </div>
     </footer>

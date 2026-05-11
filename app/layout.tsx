@@ -9,58 +9,53 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 const GA_ID = "G-5BZE4N1L9B";
 
 export const metadata = {
-  metadataBase: new URL("https://www.betons.ae"),
+  metadataBase: new URL("https://www.jannahpure.com"),
   title: {
     default:
-      "Betons Business Services | Company Formation & Business Setup in Dubai, UAE",
-    template: "%s | Betons Business Services",
+      "جنة بيور | أنظمة تنقية المياه المركزية الرائدة في قطر",
+    template: "%s | جنة بيور",
   },
   description:
-    "Betons Business Services is a Dubai-based consultancy specializing in company formation, business setup, document clearing, and free zone services across the UAE. Trusted by startups and enterprises.",
+    "تقدم جنة بيور أنظمة تنقية مياه مركزية خبيرة، وخدمات صيانة، وحلول تنظيف الخزانات للقطاعات السكنية والتجارية في قطر.",
   keywords: [
-    "Betons Business Services",
-    "company formation in Dubai",
-    "business setup in UAE",
-    "document clearing Dubai",
-    "free zone company setup UAE",
-    "Dubai business consultancy",
-    "trade license Dubai",
-    "PRO services Dubai",
-    "100% foreign ownership UAE",
-    "start a business in Dubai",
-    "UAE company registration",
-    "business setup consultants Dubai",
-    "visa processing UAE",
-    "Dubai mainland company formation",
-    "DMCC company setup",
+    "جنة بيور",
+    "تنقية المياه في قطر",
+    "أنظمة المياه المركزية",
+    "صيانة الفلاتر",
+    "تنظيف خزانات المياه",
+    "فلاتر مياه قطر",
+    "محطة تنقية مياه",
+    "فلاتر جامبو",
+    "فلاتر مطابخ",
+    "تعقيم المياه قطر"
   ],
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title:
-      "Betons Business Services | Company Formation & Business Setup in Dubai",
+      "جنة بيور | أنظمة تنقية المياه المركزية في قطر",
     description:
-      "Expert business setup, company formation, document clearing & free zone services in Dubai, UAE. Start your business journey with Betons.",
-    url: "https://www.betons.ae",
-    siteName: "Betons Business Services",
-    locale: "en_US",
+      "المزود الرائد في قطر لأنظمة تنقية المياه المركزية والصيانة وتنظيف الخزانات.",
+    url: "https://www.jannahpure.com",
+    siteName: "جنة بيور",
+    locale: "ar_QA",
     type: "website",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Betons Business Services – Company Formation & Business Setup in Dubai, UAE",
+        alt: "جنة بيور – أنظمة تنقية المياه المركزية في قطر",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "Betons Business Services | Company Formation & Business Setup in Dubai",
+      "جنة بيور | أنظمة تنقية المياه المركزية في قطر",
     description:
-      "Expert business setup, company formation, document clearing & free zone services in Dubai, UAE. Start your business journey with Betons.",
+      "المزود الرائد في قطر لأنظمة تنقية المياه المركزية والصيانة وتنظيف الخزانات.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -80,8 +75,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="antialiased">
+    <html lang="ar" dir="rtl">
+      <body className="antialiased font-sans">
         <ThemeProvider defaultTheme="light">
           <Navigation />
           {children}
