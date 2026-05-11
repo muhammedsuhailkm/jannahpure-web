@@ -141,7 +141,7 @@ const AboutPage = () => {
           <div className="bg-[#f8f8f8] dark:bg-neutral-900 rounded-[40px] p-6 lg:p-8 transition-transform hover:-translate-y-2 duration-300">
             <div className="relative w-full h-[220px] mb-8">
               <Image
-                src="/1st.png"
+                src="/about-innovative-solutions.png"
                 alt="حلول مبتكرة"
                 fill
                 className="object-cover rounded-t-[30px] rounded-b-[30px]"
@@ -164,7 +164,7 @@ const AboutPage = () => {
           <div className="bg-[#f8f8f8] dark:bg-neutral-900 rounded-[40px] p-6 lg:p-8 transition-transform hover:-translate-y-2 duration-300">
             <div className="relative w-full h-[220px] mb-8">
               <Image
-                src="/2nd.png"
+                src="/about-specialized-support.png"
                 alt="دعم مخصص"
                 fill
                 className="object-cover rounded-t-[30px] rounded-b-[30px]"
@@ -187,7 +187,7 @@ const AboutPage = () => {
           <div className="bg-[#f8f8f8] dark:bg-neutral-900 rounded-[40px] p-6 lg:p-8 transition-transform hover:-translate-y-2 duration-300">
             <div className="relative w-full h-[220px] mb-8">
               <Image
-                src="/third.png"
+                src="/about-cost-efficiency.png"
                 alt="فعالية التكلفة"
                 fill
                 className="object-cover rounded-t-[30px] rounded-b-[30px]"
