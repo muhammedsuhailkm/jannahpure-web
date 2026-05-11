@@ -30,8 +30,7 @@ export const metadata: Metadata = {
 const stickyContent = [
   {
     title: "مهمتنا",
-    description:
-      "تقديم حلول متكاملة وموثوقة تعزز من جودة حياة عملائنا.",
+    description: "تقديم حلول متكاملة وموثوقة تعزز من جودة حياة عملائنا.",
     content: (
       <div className="flex h-full w-full items-center justify-center text-white bg-muted/20">
         <Image
@@ -46,8 +45,7 @@ const stickyContent = [
   },
   {
     title: "رؤيتنا",
-    description:
-      "أن نكون الخيار الأول في قطر لحلول المياه الآمنة والصحية.",
+    description: "أن نكون الخيار الأول في قطر لحلول المياه الآمنة والصحية.",
     content: (
       <div className="flex h-full w-full items-center justify-center text-white bg-muted/20">
         <Image
@@ -114,7 +112,9 @@ const AboutPage = () => {
         <h2
           className={`max-w-[950px] mx-auto text-3xl md:text-5xl lg:text-[46px] leading-[1.45] text-black dark:text-white ${playfair.className}`}
         >
-          جنة بيور هي شركة قطرية رائدة متخصصة في أنظمة تنقية المياه المركزية وحلول معالجتها، تخدم الأفراد والشركات في جميع أنحاء قطر بتقديم خدمات احترافية في تنظيف الخزانات وصيانة الفلاتر.
+          جنة بيور هي شركة قطرية رائدة متخصصة في أنظمة تنقية المياه المركزية
+          وحلول معالجتها، تخدم الأفراد والشركات في جميع أنحاء قطر بتقديم خدمات
+          احترافية في تنظيف الخزانات وصيانة الفلاتر.
         </h2>
 
         {/* Decorative Star Icon */}
@@ -156,7 +156,8 @@ const AboutPage = () => {
             </h3>
 
             <p className="text-[16px] leading-[1.8] text-black/60 dark:text-white/60">
-              احصل على مجموعة كاملة من الخدمات المبتكرة لحلول تنقية المياه، كلها تحت سقف واحد.
+              احصل على مجموعة كاملة من الخدمات المبتكرة لحلول تنقية المياه، كلها
+              تحت سقف واحد.
             </p>
           </div>
 
@@ -179,7 +180,8 @@ const AboutPage = () => {
             </h3>
 
             <p className="text-[16px] leading-[1.8] text-black/60 dark:text-white/60">
-              احصل على دعم عملي ومخصص من خبرائنا لتلبية احتياجاتك المائية بكل احترافية.
+              احصل على دعم عملي ومخصص من خبرائنا لتلبية احتياجاتك المائية بكل
+              احترافية.
             </p>
           </div>
 
@@ -202,7 +204,8 @@ const AboutPage = () => {
             </h3>
 
             <p className="text-[16px] leading-[1.8] text-black/60 dark:text-white/60">
-              وفر وقتك ومواردك مع عملياتنا المبسطة وإرشادات خبرائنا لضمان أفضل قيمة.
+              وفر وقتك ومواردك مع عملياتنا المبسطة وإرشادات خبرائنا لضمان أفضل
+              قيمة.
             </p>
           </div>
         </div>
@@ -218,7 +221,7 @@ const AboutPage = () => {
       <div className="relative w-full h-[90vh] flex items-center group overflow-hidden">
         {/* Background Image */}
         <Image
-          src="/new-hero.jpg"
+          src="/about-innovative-solutions.png"
           alt="Hero"
           fill
           className="object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
@@ -241,7 +244,9 @@ const AboutPage = () => {
 
           {/* Left Content in RTL (Right Content visually) */}
           <div className="hidden md:flex flex-col items-start text-white text-left transition-transform duration-700 ease-out group-hover:-translate-y-2 delay-100">
-            <h2 className="text-6xl lg:text-7xl font-light drop-shadow-md">20+</h2>
+            <h2 className="text-6xl lg:text-7xl font-light drop-shadow-md">
+              20+
+            </h2>
             <p className="mt-4 max-w-sm text-lg text-white/80 leading-relaxed drop-shadow-sm text-right">
               نقدم حلول مياه شاملة تضمن الجودة والأمان وراحة البال لكل عميل.
             </p>
