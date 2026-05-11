@@ -154,9 +154,9 @@ const Navigation = () => {
           </Link>
 
           {/* Left Side Group (in RTL this visually aligns to left side of screen) */}
-          <div className="hidden md:flex items-center space-x-12 space-x-reverse">
+          <div className="hidden md:flex items-center gap-x-12">
             {/* Desktop Menu */}
-            <div className="flex items-center space-x-12 space-x-reverse">
+            <div className="flex items-center gap-x-12">
               <Link href="/about" onClick={handleClick}>
                 من نحن
               </Link>
