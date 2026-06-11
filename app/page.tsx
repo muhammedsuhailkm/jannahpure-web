@@ -1,7 +1,9 @@
 // app/page.tsx
 import Hero from "@/components/Hero";
 import AboutSection from "@/components/AboutSection";
+import ServicesPhotosGrid from "@/components/ServicesPhotosGrid";
 import ServicesOverview from "@/components/ServicesOverview";
+import AdditionalPhotosGrid from "@/components/AdditionalPhotosGrid";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import SupportSection from "@/components/SupportSection";
 
@@ -103,9 +105,18 @@ export default function Page() {
       />
       <Hero />
       <AboutSection />
+      <ServicesPhotosGrid />
       <ServicesOverview />
+      <AdditionalPhotosGrid />
       <WhyChooseUs />
       <SupportSection />
+
+      {/* Fixed bottom-left GIF */}
+      <img
+        src="/video.gif"
+        alt="جنة بيور"
+        className="fixed bottom-4 left-4 w-32 h-32 rounded-xl shadow-lg z-50 pointer-events-none object-cover"
+      />
     </main>
   );
 }
