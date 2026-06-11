@@ -111,10 +111,13 @@ export default function Page() {
       <WhyChooseUs />
       <SupportSection />
 
-      {/* Fixed bottom-left GIF */}
-      <img
-        src="/video.gif"
-        alt="جنة بيور"
+      {/* Fixed bottom-left video */}
+      <video
+        src="/video.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
         className="fixed bottom-4 left-4 w-32 h-32 rounded-xl shadow-lg z-50 pointer-events-none object-cover"
       />
     </main>
