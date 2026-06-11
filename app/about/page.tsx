@@ -68,12 +68,13 @@ const AboutPage = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/aboutfit.png"
+            src="/aboutfit.webp"
             alt="من نحن"
             fill
             className="object-cover object-top"
             priority
             sizes="100vw"
+            quality={60}
           />
         </div>
 
@@ -141,11 +142,13 @@ const AboutPage = () => {
           <div className="bg-[#f8f8f8] dark:bg-neutral-900 rounded-[40px] p-6 lg:p-8 transition-transform hover:-translate-y-2 duration-300">
             <div className="relative w-full h-[220px] mb-8">
               <Image
-                src="/about-innovative-solutions.png"
+                src="/about-innovative-solutions.webp"
                 alt="حلول مبتكرة"
                 fill
                 className="object-cover rounded-t-[30px] rounded-b-[30px]"
-                sizes="(max-width: 768px) 100vw, 33vw"
+                sizes="(max-width: 768px) 100vw, 384px"
+                loading="lazy"
+                quality={65}
               />
             </div>
 
@@ -165,11 +168,13 @@ const AboutPage = () => {
           <div className="bg-[#f8f8f8] dark:bg-neutral-900 rounded-[40px] p-6 lg:p-8 transition-transform hover:-translate-y-2 duration-300">
             <div className="relative w-full h-[220px] mb-8">
               <Image
-                src="/about-specialized-support.png"
+                src="/about-specialized-support.webp"
                 alt="دعم مخصص"
                 fill
                 className="object-cover rounded-t-[30px] rounded-b-[30px]"
-                sizes="(max-width: 768px) 100vw, 33vw"
+                sizes="(max-width: 768px) 100vw, 384px"
+                loading="lazy"
+                quality={65}
               />
             </div>
 
@@ -189,11 +194,13 @@ const AboutPage = () => {
           <div className="bg-[#f8f8f8] dark:bg-neutral-900 rounded-[40px] p-6 lg:p-8 transition-transform hover:-translate-y-2 duration-300">
             <div className="relative w-full h-[220px] mb-8">
               <Image
-                src="/about-cost-efficiency.png"
+                src="/about-cost-efficiency.webp"
                 alt="فعالية التكلفة"
                 fill
                 className="object-cover rounded-t-[30px] rounded-b-[30px]"
-                sizes="(max-width: 768px) 100vw, 33vw"
+                sizes="(max-width: 768px) 100vw, 384px"
+                loading="lazy"
+                quality={65}
               />
             </div>
 
@@ -221,11 +228,13 @@ const AboutPage = () => {
       <div className="relative w-full h-[90vh] flex items-center group overflow-hidden">
         {/* Background Image */}
         <Image
-          src="/about-innovative-solutions.png"
+          src="/about-innovative-solutions.webp"
           alt="Hero"
           fill
           className="object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
           sizes="100vw"
+          loading="lazy"
+          quality={60}
         />
 
         {/* Dark Overlay */}
@@ -255,19 +264,124 @@ const AboutPage = () => {
       </div>
 
       {/* Our Core Values Section */}
-      <div className="w-full bg-[#f4f7f8] dark:bg-neutral-950 py-24 px-6 flex justify-center">
-        <div className="max-w-4xl w-full">
+      <div className="w-full bg-[#f4f7f8] dark:bg-neutral-950 py-24 px-6">
+        <div className="max-w-7xl mx-auto">
           <h2
-            className={`text-4xl md:text-5xl font-bold text-black dark:text-white mb-12 text-center ${playfair.className}`}
+            className={`text-4xl md:text-5xl font-bold text-black dark:text-white mb-16 text-center ${playfair.className}`}
           >
             قيمنا الأساسية
           </h2>
-          <ul className="space-y-4 text-[17px] font-medium text-gray-800 dark:text-gray-300 list-disc pr-6 pl-0 leading-[1.8] marker:text-black dark:marker:text-white">
-            <li>الجودة</li>
-            <li>النزاهة</li>
-            <li>خدمة ما بعد البيع</li>
-            <li>الابتكار</li>
-          </ul>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Value 1: Quality */}
+            <div className="group bg-white dark:bg-neutral-900 rounded-[28px] overflow-hidden transition-all duration-400 hover:-translate-y-2 hover:shadow-xl">
+              <div className="relative h-[200px] overflow-hidden">
+                <Image
+                  src="/one.jpeg"
+                  alt="الجودة"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              </div>
+              <div className="p-6 text-center">
+                <div className="w-10 h-10 mx-auto mb-4 rounded-full bg-[#1e3a8a]/10 dark:bg-[#3b82f6]/20 flex items-center justify-center">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-[#1e3a8a] dark:text-[#60a5fa]">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
+                <h3 className={`text-xl font-bold text-black dark:text-white mb-2 ${playfair.className}`}>
+                  الجودة
+                </h3>
+                <p className="text-sm text-black/50 dark:text-white/50 leading-relaxed">
+                  نلتزم بأعلى معايير الجودة في جميع خدماتنا ومنتجاتنا
+                </p>
+              </div>
+            </div>
+
+            {/* Value 2: Integrity */}
+            <div className="group bg-white dark:bg-neutral-900 rounded-[28px] overflow-hidden transition-all duration-400 hover:-translate-y-2 hover:shadow-xl">
+              <div className="relative h-[200px] overflow-hidden">
+                <Image
+                  src="/three.jpeg"
+                  alt="النزاهة"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              </div>
+              <div className="p-6 text-center">
+                <div className="w-10 h-10 mx-auto mb-4 rounded-full bg-[#1e3a8a]/10 dark:bg-[#3b82f6]/20 flex items-center justify-center">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-[#1e3a8a] dark:text-[#60a5fa]">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
+                <h3 className={`text-xl font-bold text-black dark:text-white mb-2 ${playfair.className}`}>
+                  النزاهة
+                </h3>
+                <p className="text-sm text-black/50 dark:text-white/50 leading-relaxed">
+                  نعمل بشفافية وأمانة مع كل عميل ونحترم ثقته بنا
+                </p>
+              </div>
+            </div>
+
+            {/* Value 3: After-sales Service */}
+            <div className="group bg-white dark:bg-neutral-900 rounded-[28px] overflow-hidden transition-all duration-400 hover:-translate-y-2 hover:shadow-xl">
+              <div className="relative h-[200px] overflow-hidden">
+                <Image
+                  src="/five.jpeg"
+                  alt="خدمة ما بعد البيع"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              </div>
+              <div className="p-6 text-center">
+                <div className="w-10 h-10 mx-auto mb-4 rounded-full bg-[#1e3a8a]/10 dark:bg-[#3b82f6]/20 flex items-center justify-center">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-[#1e3a8a] dark:text-[#60a5fa]">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
+                <h3 className={`text-xl font-bold text-black dark:text-white mb-2 ${playfair.className}`}>
+                  خدمة ما بعد البيع
+                </h3>
+                <p className="text-sm text-black/50 dark:text-white/50 leading-relaxed">
+                  دعم فني متواصل وصيانة دورية لضمان رضاك الدائم
+                </p>
+              </div>
+            </div>
+
+            {/* Value 4: Innovation */}
+            <div className="group bg-white dark:bg-neutral-900 rounded-[28px] overflow-hidden transition-all duration-400 hover:-translate-y-2 hover:shadow-xl">
+              <div className="relative h-[200px] overflow-hidden">
+                <Image
+                  src="/nine.jpeg"
+                  alt="الابتكار"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              </div>
+              <div className="p-6 text-center">
+                <div className="w-10 h-10 mx-auto mb-4 rounded-full bg-[#1e3a8a]/10 dark:bg-[#3b82f6]/20 flex items-center justify-center">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-[#1e3a8a] dark:text-[#60a5fa]">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3" strokeLinecap="round" strokeLinejoin="round" />
+                    <line x1="12" y1="17" x2="12.01" y2="17" />
+                  </svg>
+                </div>
+                <h3 className={`text-xl font-bold text-black dark:text-white mb-2 ${playfair.className}`}>
+                  الابتكار
+                </h3>
+                <p className="text-sm text-black/50 dark:text-white/50 leading-relaxed">
+                  نسعى دائمًا لتطبيق أحدث التقنيات في حلول تنقية المياه
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>

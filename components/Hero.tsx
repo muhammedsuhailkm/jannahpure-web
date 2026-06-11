@@ -7,7 +7,7 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 md:pt-32">
       {/* Background Image */}
       <Image
-        src="/heroo.png"
+        src="/heroo.webp"
         alt="أنظمة تنقية المياه"
         fill
         priority
